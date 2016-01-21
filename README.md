@@ -17,3 +17,4 @@
 ## Useful notes
 
 [Unix and Git](shell_and_git.md)
+[Python Notes](python.md)
