@@ -6,10 +6,10 @@ David Martin
 
 ## Students
 
-Simon Bajew
-Alan Keith
-Imogen Stafford
-Maxim Tsenkov
+* Simon Bajew
+* Alan Keith
+* Imogen Stafford
+* Maxim Tsenkov
 
 ## Useful notes
 
