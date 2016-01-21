@@ -6,10 +6,13 @@
 
 ## Students
 
-* Simon Bajew
-* Alan Keith
-* Imogen Stafford
-* Maxim Tsenkov
+
+
+* [Alan Keith](akeith.md)
+* [Simon Bajew](SimonB.md)
+* [Imogen Stafford](imogenabout.md)
+* [Maxim Tsenkov](MaximT.md)
+
 
 ## Useful notes
 
