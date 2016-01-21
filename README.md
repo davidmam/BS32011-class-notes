@@ -2,7 +2,7 @@
 
 ## Instructor
 
-David Martin
+[David Martin](DavidM.md)
 
 ## Students
 
