@@ -13,9 +13,24 @@
 
 `mkdir` create a new folder
 
+`less filename` read a file one page at a time. 
+*Q* to quit. *ENTER* to go down a line. *SPACE* to go down a page
+
 
 
 
 # Git commands
 
 `git init`  - put a directory under version control
+
+`git status` - current status of the repository
+
+`git add filename` adds a file to the staging area
+
+`git config --global user.email 'd.m.a.martin@dundee.ac.uk'` - setup global git email
+`git config --global user.name 'David Martin'` - setup global git user name
+
+`git commit -m ' message'`  - save a version in the repository with the message.
+
+`git log` - show a commit history
+
