@@ -2,15 +2,17 @@
 
 ## Instructor
 
-David Martin
+[David Martin](DavidM.md)
 
 ## Students
 
 
+
 * [Alan Keith](akeith.md)
 * [Simon Bajew](SimonB.md)
-* Imogen Stafford
+* [Imogen Stafford](imogenabout.md)
 * [Maxim Tsenkov](MaximT.md)
+
 
 ## Useful notes
 
