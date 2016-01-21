@@ -1,4 +1,4 @@
-# Mitochondrial species 
+# Mitochondrial sequences 
 
 ## Species
 
