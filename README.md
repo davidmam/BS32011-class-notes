@@ -6,7 +6,7 @@ David Martin
 
 ## Students
 
-* Simon Bajew
+* [Simon Bajew](SimonB.md)
 * Alan Keith
 * Imogen Stafford
 * Maxim Tsenkov
