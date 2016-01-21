@@ -8,7 +8,7 @@ David Martin
 
 * Simon Bajew
 * Alan Keith
-* Imogen Stafford
+* [Imogen Stafford](imogenabout)
 * Maxim Tsenkov
 
 ## Useful notes
