@@ -10,3 +10,9 @@
 6. '*Sciurus vulgaris*', NCBI Accession number: NC_002369.1
 7. '*sp_name*', NCBI Accession number: 
 8. '*sp_name*', NCBI Accession number: 
+
+# FASTA files
+
+All 8 sequences wrapped for MSA in Jalview.
+
+[Raw FASTA sequences](all_sequences.FASTA)
