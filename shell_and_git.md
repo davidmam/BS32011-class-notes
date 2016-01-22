@@ -36,3 +36,4 @@
 
 `git checkout -- filename` restore the last committed version of filename
 
+See [this article](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004668) for an overview and introduction to git
