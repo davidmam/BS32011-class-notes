@@ -8,5 +8,5 @@
 4. '*Meles meles*', NCBI Accession number: NC_011125.1
 5. '*Erinaceus europaeus*', NCBI Accession number: NC_002080.2
 6. '*Sciurus vulgaris*', NCBI Accession number: NC_002369.1
-7. '*sp_name*', NCBI Accession number: 
-8. '*sp_name*', NCBI Accession number: 
+7. '*Mustela nivalis*', NCBI Accession number: NC_020639.1
+8. '*Mustela erminea*', NCBI Accession number: NC_025516.1
