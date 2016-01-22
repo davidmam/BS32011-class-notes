@@ -17,7 +17,3 @@
 All 8 sequences wrapped for MSA in Jalview.
 
 [Raw FASTA sequences](all_sequences.FASTA)
-=======
-7. '*Mustela nivalis*', NCBI Accession number: NC_020639.1
-8. '*Mustela erminea*', NCBI Accession number: NC_025516.1
->>>>>>> c31b7e045db8e7d8d608b8e091f30f0ebfaf8df6
