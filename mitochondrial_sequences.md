@@ -8,6 +8,7 @@
 4. '*Meles meles*', NCBI Accession number: NC_011125.1
 5. '*Erinaceus europaeus*', NCBI Accession number: NC_002080.2
 6. '*Sciurus vulgaris*', NCBI Accession number: NC_002369.1
+<<<<<<< HEAD
 7. '*sp_name*', NCBI Accession number: 
 8. '*sp_name*', NCBI Accession number: 
 
@@ -16,3 +17,7 @@
 All 8 sequences wrapped for MSA in Jalview.
 
 [Raw FASTA sequences](all_sequences.FASTA)
+=======
+7. '*Mustela nivalis*', NCBI Accession number: NC_020639.1
+8. '*Mustela erminea*', NCBI Accession number: NC_025516.1
+>>>>>>> c31b7e045db8e7d8d608b8e091f30f0ebfaf8df6
