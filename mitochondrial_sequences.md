@@ -12,6 +12,8 @@
 7. '*sp_name*', NCBI Accession number: 
 8. '*sp_name*', NCBI Accession number: 
 
+**_How about putting these into a table with the common name and linking to a page with a biit of information about the species (ie wikipedia for the common name, NCBI taxonomy for the scientific name, NCBI sequence record for the accession number)_**
+
 # FASTA files
 
 All 8 sequences wrapped for MSA in Jalview.
