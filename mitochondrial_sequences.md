@@ -8,9 +8,8 @@
 4. '*Meles meles*', NCBI Accession number: NC_011125.1
 5. '*Erinaceus europaeus*', NCBI Accession number: NC_002080.2
 6. '*Sciurus vulgaris*', NCBI Accession number: NC_002369.1
-<<<<<<< HEAD
-7. '*sp_name*', NCBI Accession number: 
-8. '*sp_name*', NCBI Accession number: 
+7. '*Mustela nivalis*', NCBI Accession number: NC_020639.1
+8. '*Mustela erminea*', NCBI Accession number: NC_025516.1
 
 **_How about putting these into a table with the common name and linking to a page with a biit of information about the species (ie wikipedia for the common name, NCBI taxonomy for the scientific name, NCBI sequence record for the accession number)_**
 
