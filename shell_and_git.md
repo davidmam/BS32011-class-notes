@@ -18,7 +18,7 @@
 
 `rm filename` - deletes a file (there is no undelete)
 
-'nano <filename>' - Create a file and begin adding text into this file, save it, and exit nano editor (You can use any editor available)
+'nano <file>' - Create a file and begin adding text into this file, save it, and exit nano editor (You can use any editor available)
 
 'cat <filename>' - Show file contents (i.e. the text within)
 
