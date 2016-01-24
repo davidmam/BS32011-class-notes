@@ -14,9 +14,9 @@
 
 `mkdir` - create a new folder
 
-`less __file__` - read a file one page at a time; __Q__ to quit, __ENTER__ to go down a line, __SPACE__ to go down a page
+`less ''file''` - read a file one page at a time; __Q__ to quit, __ENTER__ to go down a line, __SPACE__ to go down a page
 
-`rm __file__` - deletes a file (there is no undelete)
+`rm '''file'''` - deletes a file (there is no undelete)
 
 `nano __file__` - Create a file and begin adding text into this file, save it, and exit nano editor (you can use any editor available)
 
