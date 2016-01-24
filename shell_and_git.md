@@ -33,7 +33,7 @@
 
 ### SETTING UP
 
-`git config --global user.email "*<email*"` - Setup global git email
+`git config --global user.email "*email*"` - Setup global git email
 
 `git config --global user.name "*name*"` - Setup global git username
 
@@ -81,11 +81,11 @@
 
 ### IGNORE
 
-`nano .gitignore` - Create a file with written text, showing the core extensions of the files that require ignoring and not to be viewed (for example *.dat is written for files like a.dat, b.dat, c.dat to be ignores)
+`nano *.gitignore*` - Create a file with written text, showing the core extensions of the files that require ignoring and not to be viewed (for example *.dat is written for files like a.dat, b.dat, c.dat to be ignores)
 
 `git add -f *file.extension*` - Command overrides the ignore settings set in *.gitignore* and will add *file.extension*
 
-`git status ignored` - View the status of ignored files withn .gitignore
+`git status ignored` - View the status of ignored files withn *.gitignore*
 
 ======
 
