@@ -14,7 +14,7 @@
 
 `mkdir` - create a new folder
 
-`less ''file''` - read a file one page at a time; __Q__ to quit, __ENTER__ to go down a line, __SPACE__ to go down a page
+`less <b>file</b>` - read a file one page at a time; __Q__ to quit, __ENTER__ to go down a line, __SPACE__ to go down a page
 
 `rm '''file'''` - deletes a file (there is no undelete)
 
