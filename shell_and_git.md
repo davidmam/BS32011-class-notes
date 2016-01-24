@@ -1,39 +1,38 @@
-# Bash commands
+# Bash Commands
 
-___N.B - everything within {  } is a specific name, line of text, or referring to something that is unique and is not part of the command you type out___
+`pwd` - Ehows my current location in the file system
 
-`pwd` - shows my current location in the file system
+`cd directory` - Change to a specific directory
 
-`cd directory` - change to a specific directory
+`cd` - Change to home directory
 
-`cd` - change to home directory
+`cd ..` - Go up one directory
 
-`cd ..` - go up one directory
+`cd -` - Change to the previous directory
 
-`cd -` - change to the previous directory
+`ls` - List files in that directory
 
-`ls` - list files in that directory
+`mkdir` - Create a new folder
 
-`mkdir` - create a new folder
+`less {file}` - Read a file one page at a time; __Q__ to quit, __ENTER__ to go down a line, __SPACE__ to go down a page
 
-`less {file}` - read a file one page at a time; __Q__ to quit, __ENTER__ to go down a line, __SPACE__ to go down a page
-
-`rm {file}` - deletes a file (there is no undelete)
+`rm {file}` - Deletes a file (there is no undelete)
 
 `nano {file}` - Create a file and begin adding text into this file, save it, and exit nano editor (you can use any editor available)
 
 `cat {file}` - Show file contents (i.e. the text within)
 
-# Git commands
+# Git Commands
 
-### PULL AND PUSH
+#### PULL AND PUSH
 
 `git pull origin master` - Pull changes from the remote repository to the local one
 
 `git push {remote} {origin}` - Push local changes to the remote repository and update with the latest changes
 
+======
 
-### SETTING UP
+#### SETTING UP
 
 `git config --global user.email "{email}"` - Setup global git email
 
@@ -41,13 +40,17 @@ ___N.B - everything within {  } is a specific name, line of text, or referring t
 
 `git config --list` - Displays your settings and shows you the chosen name, email, and other relevant information
 
-### CREATE
+======
+
+#### CREATE
 
 `git clone ssh://user@domain.com/repo.git` - Clone an existing repository
 
 `git init` - Create a new local repository and putting the directory under version control
 
-### LOCAL CHANGES
+======
+
+#### LOCAL CHANGES
 
 `git status` - Check any changed files in your working directory
 
@@ -57,13 +60,15 @@ ___N.B - everything within {  } is a specific name, line of text, or referring t
 
 `git add` - Add all current changes to the next commit
 
-`git commit -m "{message}"` - save a version in the repository with the message.
+`git commit -m "{message}"` - Save a version in the repository with the message.
 
 `git commit -a "{message}"` - Commit all local changes in tracked files
 
 `git commit -am "{message}"` - Will commit all files being tracked
 
-### COMMIT HISTORY AND STATUS
+======
+
+#### COMMIT HISTORY AND STATUS
 
 `git log` - Show all commits in reverse chronological order
 
@@ -73,21 +78,27 @@ ___N.B - everything within {  } is a specific name, line of text, or referring t
 
 `git status` - Current status of the repository
 
-`git checkout -- {file}` restore the last committed version of file
+`git checkout -- {file}` - Restore the last committed version of file
 
-`git log` - show a commit history
+`git log` - Show a commit history
 
 `git diff HEAD~{X} {file}` - View the different changes at different steps to refer to old commits, where X refers to a number (for example the number 2 would show the second last commit done)
 
-`git diff {log number} {file}`
+`git diff {log number} {file}` - Refer to commits using the saved git log string of digits that are unique to the commit, and you can either type out the whole line of digits or approximately the first ten digits
 
-### IGNORE
+======
+
+#### IGNORE
 
 `nano .gitignore` - Create a file with written text, showing the core extensions of the files that require ignoring and not to be viewed (for example .dat is written for files like a.dat, b.dat, c.dat to be ignores)
 
 `git add -f {file.extension}` - Command overrides the ignore settings set in .gitignore and will add file.extension
 
 `git status ignored` - View the status of ignored files withn .gitignore
+
+======
+
+___N.B - Everything within {  } is a specific name, line of text, or referring to something that is unique and is not part of the command you type out___
 
 ======
 
