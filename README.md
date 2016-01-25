@@ -2,23 +2,23 @@
 
 ## Instructor
 
-[David Martin](DavidM.md)
+[David Martin](biographies/DavidM.md)
 
 ## Students
 
 
 
-* [Alan Keith](akeith.md)
-* [Simon Bajew](SimonB.md)
-* [Imogen Stafford](imogenabout.md)
-* [Maxim Tsenkov](MaximT.md)
+* [Alan Keith](biographies/akeith.md)
+* [Simon Bajew](biographies/SimonB.md)
+* [Imogen Stafford](biographies/imogenabout.md)
+* [Maxim Tsenkov](biographies/MaximT.md)
 
 
 ## Useful notes
 
-[Unix and Git](shell_and_git.md)  
-[Python Notes](python.md)
+[Unix and Git](tutorials/shell_and_git.md)  
+[Python Notes](tutorials/python.md)
 
 ## Mitochondrial sequences
 
-[Species](mitochondrial_sequences.md)
+[Species](sequences/mitochondrial_sequences.md)
