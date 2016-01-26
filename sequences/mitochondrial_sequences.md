@@ -19,3 +19,4 @@
 All 8 sequences wrapped for MSA in Jalview.
 
 [Raw FASTA sequences](all_sequences.FASTA)
+[Raw Jalview alignment](raw_data.FASTA)
