@@ -1,12 +1,3 @@
-#this works but looks hidous! need to write a loop
-cutsite=5 #cut-off for sequences
-
-sequences={'species1':'-----AGCTTAC-ACG', 'species2':'GGGGGAGCTTAC----', 'species3':'G--A-AGCTTAC----'}
-sequences['species1']=sequences['species1'][cutsite:]+sequences['species1'][:cutsite]
-sequences['species2']=sequences['species2'][cutsite:]+sequences['species2'][:cutsite]
-sequences['species3']=sequences['species3'][cutsite:]+sequences['species3'][:cutsite]
-
-
      #setting the cut-off for sequences  
 cutsite= 5
     #creating a list of dictionaries with two pairs of key:value
@@ -21,4 +12,9 @@ for seq in sequences:
     seq['seq']=seq['seq'][cutsite:]+seq['seq'][:cutsite] #rearranged the sequences
 print(sequences)
 
-    
+    #setting the limit for viewing sequences  
+limit=5
+    # making a new file to hold the output
+output=open("sequences.fasta", "w")
+    # writing the header and sequence 
+output.write('>' + seq['name'] + '\n' + seq['seq'] + '\n')
