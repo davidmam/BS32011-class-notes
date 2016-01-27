@@ -11,7 +11,7 @@
 ####Simon and Imogen
 - Practice and write python code for:
   - ~~'Cut and paste' the raw alignment sequences in Python so that all eight mitochondrial sequences start and finish at the same points~~
-  -~Creat dictionary~
+  -~~Creat dictionary~~
 - ~~Upload __raw alignment sequences__~~
 - Upload ___corrected alignment sequences___
 
