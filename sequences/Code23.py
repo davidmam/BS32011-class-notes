@@ -23,16 +23,11 @@ fh.close()
 #setting the cut-off for sequences, start position for the first common unit
 cutsite= 
 
+output=open("sequences.fasta", "w")
 for seq in sequences:
     seq['sequence'][:cutsite] #looking at the seq in 'seq' key and reading it from [:cutsite]
     seq['sequence']=seq['sequence'][cutsite:]+seq['sequence'][:cutsite] #rearranging the sequences
+	output.write('>' + seq['Species'] + '\n' + seq['sequence'] + '\n')
 print(sequences)
 
-    # making a new file to hold the output
-output=open("sequences.fasta", "w") # put this line before the loop at line 26
-    # writing the header and sequence 
-output.write('>' + entry['Species'] + '\n' + entry['sequence'] + '\n') #put this inside teh loop from 26, renaming entry to seq
-
-#remmeber to close the file
-for line in output.readlines():
-    
+output.close()
