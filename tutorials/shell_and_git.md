@@ -60,7 +60,7 @@
 
 `git add` - Add all current changes to the next commit
 
-'git add <file1><file2><file_n>' -Add several files to the staging area
+`git add <file1><file2><file_n>` -Add several files to the staging area
 
 `git commit -m "{message}"` - Save a version in the repository with the message.
 
@@ -88,9 +88,9 @@
 
 `git diff {log number} {file}` - Refer to commits using the saved git log string of digits that are unique to the commit, and you can either type out the whole line of digits or approximately the first ten digits
 
-'git reset HEAD file_name' - Unstages file changes in the staging area
+`git reset HEAD file_name` - Unstages file changes in the staging area
 
-'git reset SHA' -Can be used to reset to a previous commit in your commit history.
+`git reset SHA` -Can be used to reset to a previous commit in your commit history.
 ======
 
 #### IGNORE
@@ -103,17 +103,17 @@
 
 ======
 
-### BRANCHING
+#### BRANCHING
 
-'git branch' - Lists all a Git project's branches.
+`git branch` - Lists all a Git project's branches.
 
-'git branch branch_name' - Creates a new branch.
+`git branch branch_name` - Creates a new branch.
 
-'git checkout branch_name' - Used to switch from one branch to another.
+`git checkout branch_name` - Used to switch from one branch to another.
 
-'git merge branch_name' - Used to join file changes from one branch to another.
+`git merge branch_name` - Used to join file changes from one branch to another.
 
-'git branch -d branch_name' - Deletes the branch specified.
+`git branch -d branch_name` - Deletes the branch specified.
 
 =====
 
