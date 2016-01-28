@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Jan 28 08:36:04 2016
-
-@author: Anonymax
-"""
 
 #set the working directory
 #open the .fasta file for raw alignment
