@@ -5,11 +5,14 @@ Created on Thu Jan 28 08:36:04 2016
 @author: Anonymax
 """
 
+#set the working directory
+#open the .fasta file for raw alignment
 fh=open("raw_data.fasta",'r')
 
 sequences=[]  
 for line in fh.readlines():
-    if line[0]=='>':
+    #for a line starting fromm '>'
+	if line[0]=='>':
         name=line[1:].replace("\n",'')
         entry={'Species':name, 'sequence':''}
         sequences.append(entry)
@@ -17,8 +20,8 @@ for line in fh.readlines():
         entry['sequence']= entry['sequence']+line.replace('\n','')
 fh.close()
 
-#setting the cut-off for sequences
-cutsite=658
+#setting the cut-off for sequences, start position for the first common unit
+cutsite= 
 
 for seq in sequences:
     seq['sequence'][:cutsite] #looking at the seq in 'seq' key and reading it from [:cutsite]
