@@ -29,9 +29,10 @@ for seq in sequences:
 print(sequences)
 
     # making a new file to hold the output
-output=open("sequences.fasta", "w")
+output=open("sequences.fasta", "w") # put this line before the loop at line 26
     # writing the header and sequence 
-output.write('>' + entry['Species'] + '\n' + entry['sequence'] + '\n')
+output.write('>' + entry['Species'] + '\n' + entry['sequence'] + '\n') #put this inside teh loop from 26, renaming entry to seq
 
+#remmeber to close the file
 for line in output.readlines():
     
