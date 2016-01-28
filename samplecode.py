@@ -18,3 +18,17 @@ limit=5
 output=open("sequences.fasta", "w")
     # writing the header and sequence 
 output.write('>' + seq['name'] + '\n' + seq['seq'] + '\n')
+
+
+
+output.readline(limit)
+
+if len(output)>5:
+    output=output[:5]
+
+def limiting(output):
+    output=output[:5]
+    return output
+    
+    for x in sequences:
+    print(x['name'], x['seq'])
