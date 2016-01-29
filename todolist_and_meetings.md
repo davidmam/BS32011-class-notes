@@ -8,21 +8,24 @@
 ===
 
 ###Weekly Goals
-####Simon and Imogen
-- Practice and write python code for:
-  - ~~'Cut and paste' the raw alignment sequences in Python so that all eight mitochondrial sequences start and finish at the same points~~
-  -~~Creat dictionary~~
-- ~~Upload __raw alignment sequences__~~
-- Upload ___corrected alignment sequences___
+#### General
+- [ ] Python tutorials!
+- [ ] Git
+- 
+####Simon and Alan
+- [ ] script to read EMBOSS output and present the restriction maps
+  - [ ] correct gaps so that each restriction enzyme site refers to a colun in the aligned sequence
+  - [ ] write a general script
 
-####Alan and Maxim
-- Figure out how to ___produce fasta files from the output___ that Simon and Imogen produce
+####Maxim and Imogen
+- [ ] realign .fasta output in Jalview, upload the file
+- [ ] script to find restriction enzymes sites to distinguish two species
 
 ===
 
 ###Planning Ahead
 
-___Once 'To-Do List' is completed, plan ahead for restriction sites___
+- [ ] think about Primer3 input and output
 
 ===
 
