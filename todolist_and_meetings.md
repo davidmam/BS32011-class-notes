@@ -1,9 +1,9 @@
 #To-Do List
 
 ###General
-- ~~___Organise GitHub repository___ by adding new subdirectories and rearranging files (sequences, biographies, tutorials)~~
-- ~~Create list of ___meetings___ and a ___to-do list___~~
-- ~~Update ___README.md___ file~~
+- [x] Organise GitHub repositoryby adding new subdirectories and rearranging files (sequences, biographies, tutorials)
+- [x] Create list of meetings and a to-do list
+- [x] Update README.md file
 
 ===
 
