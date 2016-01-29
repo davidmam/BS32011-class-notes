@@ -91,6 +91,7 @@
 `git reset HEAD file_name` - Unstages file changes in the staging area
 
 `git reset SHA` -Can be used to reset to a previous commit in your commit history.
+
 ======
 
 #### IGNORE
