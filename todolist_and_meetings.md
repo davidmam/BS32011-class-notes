@@ -11,7 +11,7 @@
 #### General
 - [ ] Python tutorials!
 - [ ] Git
-- 
+
 ####Simon and Alan
 - [ ] script to read EMBOSS output and present the restriction maps
   - [ ] correct gaps so that each restriction enzyme site refers to a colun in the aligned sequence
