@@ -22,4 +22,4 @@ All 8 sequences wrapped for MSA in Jalview.
 
 - [Raw Jalview alignment](raw_data.fasta)
 
-- [Curated and aligned FASTA sequences](scripts/curated_alignment.fasta)
+- [Curated and aligned FASTA sequences](scripts/curated/aligned_sequences.fasta)
