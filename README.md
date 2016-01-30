@@ -16,9 +16,9 @@
 
 ## Useful notes
 
-[Unix and Git](tutorials/shell_and_git.md)  
-[Python Notes](tutorials/python.md)
+* [Unix and Git](tutorials/shell_and_git.md)  
+* [Python Notes](tutorials/python.md)
 
 ## Mitochondrial sequences
 
-[Species](sequences/mitochondrial_sequences.md)
+* [Species](sequences/mitochondrial_sequences.md)
