@@ -21,8 +21,8 @@
 
 ## Mitochondrial sequences
 
-* [Species](sequences/mitochondrial_sequences.md)
+* [Species and FASTA files](sequences/mitochondrial_sequences.md)
 
 ## Python Scripts
 
-* [Circular Realignment](scripts/cir_realign.py)
+* [Circular realignment](scripts/cir_realign.py)
