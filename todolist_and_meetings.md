@@ -18,7 +18,8 @@
   - [ ] write a general script
 
 ####Maxim and Imogen
-- [ ] realign .fasta output in Jalview, upload the file
+- [x] realign .fasta output in Jalview, upload the file
+
 - [ ] script to find restriction enzymes sites to distinguish two species
 
 ===
@@ -30,6 +31,43 @@
 ===
 
 #Meetings
+###Meeting 3 - Monday 01/Feb
+###Overview
+
+1. Project Overview
+So far, raw alignment has been curated according to curated_alignment.py script. 
+The alignment was loaded to EMBOSS to get the idea of how data output looks like. 
+Meanwhile, everyone’s working on Python tutorials.
+
+2. Next Steps
+  - process curated alignment in EMBOSS (names edited by Dr Martin)
+  - data saved in .restrict table format as individual files in a new folder
+  - think about reading and sorting data
+  - establish strategy for sequence comparison by unique restriction enzyme sites (algorithm provided by Dr Martin)
+
+3. EMBOSS
+  - strips alignment out of the gaps -> first challenge is to reassign the restriction sites so that they align to the sequences
+  - may create different type of output files -> it was chosen to use .restrict file that presents the output in a table
+
+4. Actions
+  - Alan and Simon will write a script to read the data
+  - Imogen and Maxim will write a script to process the data
+  - ideal scenario: data processed by Thursday, maximum by next Monday
+  - Dr Martin was asked to provide more information on:
+  
+      •	  how to edit files in EMBOSS
+
+      •	  how to process the data using simple loops
+      
+      •	  useful list of commands
+      
+      •	  report writing criteria
+      
+  - Dr Martin will provide more flip chart paper for forthcoming sessions
+
+5. Issues
+  - No issues.
+
 ###Meeting 2 - Thursday 28/Jan
 ####Overview
 1. What has been achieved
