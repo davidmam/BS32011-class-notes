@@ -25,4 +25,5 @@
 
 ## Python Scripts
 
-* [Circular realignment](scripts/cir_realign.py)
+* [Curated Alignment](scripts/curated_alignment.py)
+* [EMBOSS Alignment](scripts/align_emboss.py)
