@@ -31,6 +31,33 @@
 ===
 
 #Meetings
+
+===
+
+###Meeting 4 - Thursday 04/Feb
+####Overview
+
+1. Current State of the Project
+Both codes are partially completed. Guidance given with regards to creation of headers, dictionaries and the loop for adding in gaps for Simon and Alan; altering the loop and aligning two lists correctly for Maxim and Imogen.
+
+2. Actions
+ -Both groups should complete their code by Monday, with everyone agreeing on the name for _gapstart_. 
+ -Look at the Primer3 manual.
+ -Look at mitochondrial sequences to recognise which regions of the DNA are conserved and which are hypervariable.
+ -Identifying restriction sites which are a suitable length that a primer will have a certain level of specificity for.
+
+3. No further issues: everyone felt comfortable to continue with their tasks after discussions.
+
+####Roles and Attendance
+| Group Member   | Roles         | Attendance  |
+| -------------  |:-------------:| -----------:|
+| Maxim Tsenkov  | Presenter     | Present     |
+| Alan Keith     | Chair         | Present     |
+| Imogen Stafford| Minute Taker  | Present     |
+| Simon Bajew    |       -       | Present     |
+
+===
+
 ###Meeting 3 - Monday 01/Feb
 ###Overview
 
@@ -67,6 +94,8 @@ Meanwhile, everyone’s working on Python tutorials.
 
 5. Issues
   - No issues.
+
+===
 
 ###Meeting 2 - Thursday 28/Jan
 ####Overview
