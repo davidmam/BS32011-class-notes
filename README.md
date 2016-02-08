@@ -26,4 +26,5 @@
 ## Python Scripts
 
 * [Curated Alignment](scripts/curated_alignment.py)
+* [EMBOSS Output](scripts/emboss_read.py)
 * [EMBOSS Alignment](scripts/align_emboss.py)
