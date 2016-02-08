@@ -17,6 +17,7 @@ for line in fh.readlines():
             values=line.strip().split()
             new_data=zip(headers,values)
             new_dict=dict(new_data)
+            new_dict['sites'['Start']] = int(new_dict'sites'['Start'])
 			#append new dictionary to sites
             sites.append(new_dict)
         else:
