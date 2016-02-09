@@ -4,15 +4,15 @@ seq_dir = '../sequences/individual/'
 
 #stating the filename of the species
 species_a =  "e_europaeus"
-species_b =  "f_silvestris"
+species_b =  "s_vulgaris"
 
 #retrieve and access 'sites' using 'getsites' function and stating what files to use
 sites_a = emboss_read.getsites(seq_dir + species_a + '.restrict', seq_dir + species_a + '.fasta')
 sites_b = emboss_read.getsites(seq_dir + species_b + '.restrict', seq_dir + species_b + '.fasta')
 
 #stating functions to write out unique restriction sites
-output_a=open("species_a_rs.restrict", "w")
-output_b=open("species_b_rs.restrict", "w")
+output_a=open("e_europaeus.restrict", "w")
+output_b=open("s_vulgaris.restrict", "w")
 #function to write out to a new file for Jalview purposes
 jalview=open('features.txt','w')
 
