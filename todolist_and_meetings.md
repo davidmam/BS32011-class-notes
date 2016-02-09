@@ -1,7 +1,6 @@
 #To-Do List
 
 ###General
-- [x] Organise GitHub repositoryby adding new subdirectories and rearranging files (sequences, biographies, tutorials)
 - [x] Create list of meetings and a to-do list
 - [x] Update README.md file
 
@@ -9,28 +8,54 @@
 
 ###Weekly Goals
 #### General
-- [ ] Python tutorials!
-- [ ] Git
-
-####Simon and Alan
-- [ ] script to read EMBOSS output and present the restriction maps
-  - [ ] correct gaps so that each restriction enzyme site refers to a column in the aligned sequence
-  - [ ] write a general script
-
-####Maxim and Imogen
-- [x] realign .fasta output in Jalview, upload the file
-
-- [ ] script to find restriction enzymes sites to distinguish two species
+- [ ] Use completed scripts to produce 'filtered' restrict files containing unique restriction sites for pair of species
+- [ ] Open fasta files in Jalview and import 'features.txt' to highlight the restriction sites for pair of species
+ - [ ] View the restriction sites highlighted and perhaps consider selecting regions recognised in one species, but not so much in the other
+ - [ ] Consider the approach as to whether selecting restriction sites 'by eye' or perhaps writing out a script, for example to filter out similar sites in both sequences
+- [ ] Download and familiarise with SnapGene and Primer3
+- [ ] Look at mitochondrial sequences to recognise which regions of the DNA are conserved and which are hypervariable
+- [ ] Import the 'filtered' restrict files into Primer3
+- [ ] Map restriction sites onto the mitochondrial genome in SnapGene
+- [ ] Write script together for Primer3 output
 
 ===
 
 ###Planning Ahead
 
-- [ ] think about Primer3 input and output
+- [ ] Decide yourselves the approach you will take to select the primer pairs that distinguish the two species from each other when writing a personal script
 
 ===
 
 #Meetings
+
+===
+
+###Meeting 5 - Monday 08/Feb
+####Overview
+
+1. Current State of the Project:
+
+Script is complete and gives the correct output we need in the right format. Went over what Primer3 is, how it works and the manual online, as well as the different filters and conditions to consider for finding the best primers.
+
+2. Actions: 
+
+- Download and familiarise with SnapGene and Primer3.
+- Look at mitochondrial sequences to recognise which regions of the DNA are conserved and which are hypervariable.
+- Identifying restriction sites with specific filters and conditions, either choosing them 'by eye' or writing out a personal script to automate the process.
+- Write a script together for Primer3 output by Thursday. 
+
+
+3. No further issues: everyone felt comfortable to continue with their tasks after discussions.
+
+___N.B. - Remember to only email Dr. David Martin the commit number and the script name of your latest copy pushed, instead of sending a block of code___
+
+####Roles and Attendance
+| Group Member   | Roles         | Attendance  |
+| -------------  |:-------------:| -----------:|
+| Simon Bajew    | Presenter     | Present     |
+| Imogen Stafford| Chair         | Present     |
+| Maxim Tsenkov  | Minute Taker  | Present     |
+| Alan Keith     |       -       | Present     |
 
 ===
 
