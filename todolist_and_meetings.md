@@ -33,21 +33,19 @@
 ###Meeting 5 - Monday 08/Feb
 ####Overview
 
-1. Current State of the Project:
-
-Script is complete and gives the correct output we need in the right format. Went over what Primer3 is, how it works and the manual online, as well as the different filters and conditions to consider for finding the best primers.
+1. Current State of the Project: Script is complete and gives the correct output we need in the right format. Went over what Primer3 is, how it works and the manual online, as well as the different filters and conditions to consider for finding the best primers.
 
 2. Actions: 
 
-- Download and familiarise with SnapGene and Primer3.
-- Look at mitochondrial sequences to recognise which regions of the DNA are conserved and which are hypervariable.
-- Identifying restriction sites with specific filters and conditions, either choosing them 'by eye' or writing out a personal script to automate the process.
-- Write a script together for Primer3 output by Thursday. 
+ - Download and familiarise with SnapGene and Primer3.
+ - Look at mitochondrial sequences to recognise which regions of the DNA are conserved and which are hypervariable.
+ - Identifying restriction sites with specific filters and conditions, either choosing them 'by eye' or writing out a personal script to automate the process.
+ - Write a script together for Primer3 output by Thursday. 
 
 
 3. No further issues: everyone felt comfortable to continue with their tasks after discussions.
 
-___N.B. - Remember to only email Dr. David Martin the commit number and the script name of your latest copy pushed, instead of sending a block of code___
+ ___N.B. - Remember to only email Dr. David Martin the commit number and the script name of your latest copy pushed, instead of sending a block of code___
 
 ####Roles and Attendance
 | Group Member   | Roles         | Attendance  |
