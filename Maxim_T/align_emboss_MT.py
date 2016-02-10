@@ -1,18 +1,18 @@
 #imports the other script instead of merging two scripts
-import emboss_read
-seq_dir = '../sequences/individual/'
+import emboss_read_MT
+seq_dir = '../Maxim_T/'
 
 #stating the filename of the species
-species_a =  "e_europaeus"
-species_b =  "f_silvestris"
+species_a =  "m_meles"
+species_b =  "v_vulpes"
 
 #retrieve and access 'sites' using 'getsites' function and stating what files to use
-sites_a = emboss_read.getsites(seq_dir + species_a + '.restrict', seq_dir + species_a + '.fasta')
-sites_b = emboss_read.getsites(seq_dir + species_b + '.restrict', seq_dir + species_b + '.fasta')
+sites_a = emboss_read_MT.getsites(seq_dir + species_a + '.restrict', seq_dir + species_a + '.fasta')
+sites_b = emboss_read_MT.getsites(seq_dir + species_b + '.restrict', seq_dir + species_b + '.fasta')
 
 #stating functions to write out unique restriction sites
-output_a=open("species_a_rs.restrict", "w")
-output_b=open("species_b_rs.restrict", "w")
+output_a=open("v_vulpes_rs.restrict", "w")
+output_b=open("m_meles_rs.restrict", "w")
 #function to write out to a new file for Jalview purposes
 jalview=open('features.txt','w')
 
