@@ -25,10 +25,12 @@ def getsites(sitefile,seqfile):
     		#for line starting with space, finding first valid header
                 if line.replace(' ','').startswith('Start'):
                     headers=line.strip().split()
-    
+    print('read %s restrict entries'%len(sites))
     fh=open(seqfile,'r')
     #reading sequence as one line
     seq=''.join(fh.readlines()[1:]).replace('\n','')
+    #check the sequence length
+    print('length of sequence in file %s is %s'%(seqfile, len(seq)) 
     gaps=0
     for e in sites:
         #calculating and defining new start sites

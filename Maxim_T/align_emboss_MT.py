@@ -7,8 +7,15 @@ species_a =  "m_meles"
 species_b =  "v_vulpes"
 
 #retrieve and access 'sites' using 'getsites' function and stating what files to use
+<<<<<<< HEAD
 sites_a = emboss_read_MT.getsites(seq_dir + species_a + '.restrict', seq_dir + species_a + '.fasta')
 sites_b = emboss_read_MT.getsites(seq_dir + species_b + '.restrict', seq_dir + species_b + '.fasta')
+=======
+sites_a = emboss_read.getsites(seq_dir + species_a + '.restrict', seq_dir + species_a + '.fasta')
+print('read %s sites from %s. Last site %s'%(len(sites_a), species_a, sites_a[-1]['gappedstart']))
+sites_b = emboss_read.getsites(seq_dir + species_b + '.restrict', seq_dir + species_b + '.fasta')
+print('read %s sites from %s. Last site %s'%(len(sites_b), species_b, sites_b[-1]['gappedstart']))
+>>>>>>> 0d90d946f131119e8620cd2267aab4ab520af1b6
 
 #stating functions to write out unique restriction sites
 output_a=open("v_vulpes_rs.restrict", "w")
@@ -24,8 +31,8 @@ pos_a=0
 pos_b=0
 
 #setting a counter to know how many unique restriction sites saved
-counter_a = 0
-counter_b = 0
+counter_a=0
+counter_b=0
 
 #defining a function that displays selected information from 'sites'
 def formatsite(site):
@@ -40,7 +47,7 @@ def jalview_out(site, species):
 
 #loop selects and saves restriction sites unique to both species
 #two new files containing unique restriction sites and a 'features.txt' file (imported into Jalview) to highlight them in Jalview
-while sites_a[pos_a]['gappedstart'] < len(sites_a):
+while sites_a[pos_a]['gappedstart'] < len(sites_a): #is this correct? you are indexing with pos_a ##BUG##
     if sites_a[pos_a]['gappedstart'] == sites_b[pos_b]['gappedstart']:
         pos_a += 1
         pos_b += 1
