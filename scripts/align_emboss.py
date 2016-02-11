@@ -40,6 +40,9 @@ def jalview_out(site, species):
 
 #loop selects and saves restriction sites unique to both species
 #two new files containing unique restriction sites and a 'features.txt' file (imported into Jalview) to highlight them in Jalview
+species_a_unique=[]
+species_b_unique=[]
+
 while pos_a < len(sites_a):
     if sites_a[pos_a]['gappedstart'] == sites_b[pos_b]['gappedstart']:
         pos_a += 1
@@ -48,11 +51,13 @@ while pos_a < len(sites_a):
         output_a.write(formatsite(sites_a[pos_a])+ "\n")
         pos_a += 1
         counter_a += 1
+        species_a_unique.append(sites_a[pos_a])
         jalview.write(jalview_out(sites_a[pos_a], species_a)+'\n')
     elif sites_a[pos_a]['gappedstart'] > sites_b[pos_b]['gappedstart']:
         output_b.write(formatsite(sites_b[pos_b])+ "\n")
         pos_b += 1
         counter_b += 1
+        #add to b unique list
         jalview.write(jalview_out(sites_b[pos_b], species_b)+'\n')
 print(species_a + str(counter_a))
 print(species_b + str(counter_b))
@@ -60,3 +65,15 @@ print(species_b + str(counter_b))
 output_a.close()
 output_b.close()
 jalview.close()
+enzymecount={}
+for s in sites_a:
+    try:
+        enzymecount[s['Enzyme_name']]['all_a']+=1
+    except:
+        enzymecount[s['Enzyme_name']]={'all_a':1,'all_b':0,'unique_a':0,'unique_b':0}
+
+# after getting the count
+
+for site in unique_sites:
+    if enzymecount[site['unique_a']]< toomanycuts:
+        
