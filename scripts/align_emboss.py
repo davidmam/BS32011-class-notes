@@ -40,7 +40,7 @@ def jalview_out(site, species):
 
 #loop selects and saves restriction sites unique to both species
 #two new files containing unique restriction sites and a 'features.txt' file (imported into Jalview) to highlight them in Jalview
-while sites_a[pos_a]['gappedstart'] < len(sites_a):
+while pos_a < len(sites_a):
     if sites_a[pos_a]['gappedstart'] == sites_b[pos_b]['gappedstart']:
         pos_a += 1
         pos_b += 1
