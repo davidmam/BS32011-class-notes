@@ -123,3 +123,13 @@ ___N.B - Everything within {  } is a specific name, line of text, or referring t
 ======
 
 See [this article](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004668) for an overview and introduction to git
+
+# Logging in to the teaching server
+
+You can only log on from the campus network (Lifesci or UoD IT suites - UoD wireless may be difficult)
+
+Point your ssh client to `ts-ug.lifesci.dundee.ac.uk` and login with your username/password (or use SSH keys if you know how to set that up)
+
+You have all the Unix tools there, like `git` and so on. The preferred way to sync software and scripts is with `git`, though you can use `scp` to copy data to/from the server.
+
+![Teaching server login](Server Login.png)
