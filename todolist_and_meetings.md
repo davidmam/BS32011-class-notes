@@ -1,4 +1,4 @@
-#To-Do List
+﻿#To-Do List
 
 ###General
 - [x] Create list of meetings and a to-do list
@@ -10,9 +10,9 @@
 #### General
 - [ ] Use completed scripts to produce 'filtered' restrict files containing unique restriction sites for pair of species
 - [ ] Open fasta files in Jalview and import 'features.txt' to highlight the restriction sites for pair of species
- - [ ] View the restriction sites highlighted and perhaps consider selecting regions recognised in one species, but not so much in the other
- - [ ] Consider the approach as to whether selecting restriction sites 'by eye' or perhaps writing out a script, for example to filter out similar sites in both sequences
-- [ ] Download and familiarise with SnapGene and Primer3
+- [ ] View the restriction sites highlighted and perhaps consider selecting regions recognised in one species, but not so much in the other
+- [ ] Consider the approach as to whether selecting restriction sites 'by eye' or perhaps writing out a script, for example to filter out similar sites in both sequences
+- [x] Download and familiarise with SnapGene and Primer3
 - [ ] Look at mitochondrial sequences to recognise which regions of the DNA are conserved and which are hypervariable
 - [ ] Import the 'filtered' restrict files into Primer3
 - [ ] Map restriction sites onto the mitochondrial genome in SnapGene
@@ -29,6 +29,34 @@
 #Meetings
 
 ===
+
+###Meeting 6 - Thursday 11/Feb
+###Overview
+
+1. Python overview: emboss_Read 
+		     - Added list to prevent matching break
+		     - Printed at various points to check data is correct at each point (then removed once confirmed)
+		            align_emboss
+		     - Added lists for unique restriction sites for species a and b
+			 - added try/except to give count and unique cuts
+
+2. Actions:
+
+ - Add in 'species_b_unique' list 
+ - Decide which cuts are suitable and colour these in a different colour to rest
+ - Decide suitable parameters for primer3
+ 
+3. No further issues so far
+
+####Roles and Attendance
+| Group Member   | Roles         | Attendance  |
+| -------------  |:-------------:| -----------:|
+| Imogen Stafford| Presenter     | Present     |
+| Simon Bajew    | Chair         | Present     |
+| Alan Keith     | Minute Taker  | Present     |
+| Maxim Tsenkov  |       -       | Present     |
+
+==
 
 ###Meeting 5 - Monday 08/Feb
 ####Overview
