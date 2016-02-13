@@ -1,19 +1,13 @@
 ﻿#To-Do List
 
-###General
-- [x] Create list of meetings and a to-do list
-- [x] Update README.md file
-
-===
-
 ###Weekly Goals
 #### General
-- [ ] Use completed scripts to produce 'filtered' restrict files containing unique restriction sites for pair of species
-- [ ] Open fasta files in Jalview and import 'features.txt' to highlight the restriction sites for pair of species
-- [ ] View the restriction sites highlighted and perhaps consider selecting regions recognised in one species, but not so much in the other
-- [ ] Consider the approach as to whether selecting restriction sites 'by eye' or perhaps writing out a script, for example to filter out similar sites in both sequences
+- [x] Use completed scripts to produce 'filtered' restrict files containing unique restriction sites for pair of species
+- [x] Open fasta files in Jalview and import 'features.txt' to highlight the restriction sites for pair of species
+- [x] View the restriction sites highlighted and perhaps consider selecting regions recognised in one species, but not so much in the other
+- [x] Consider the approach as to whether selecting restriction sites 'by eye' or perhaps writing out a script, for example to filter out similar sites in both sequences
 - [x] Download and familiarise with SnapGene and Primer3
-- [ ] Look at mitochondrial sequences to recognise which regions of the DNA are conserved and which are hypervariable
+- [x] Look at mitochondrial sequences to recognise which regions of the DNA are conserved and which are hypervariable
 - [ ] Import the 'filtered' restrict files into Primer3
 - [ ] Map restriction sites onto the mitochondrial genome in SnapGene
 - [ ] Write script together for Primer3 output
