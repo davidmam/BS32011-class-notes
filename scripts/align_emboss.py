@@ -4,15 +4,15 @@ seq_dir = '../sequences/individual/'
 
 #stating the filename of the species
 species_a =  "e_europaeus"
-species_b =  "f_silvestris"
+species_b =  "s_vulgaris"
 
 #retrieve and access 'sites' using 'getsites' function and stating what files to use
 sites_a = emboss_read.getsites(seq_dir + species_a + '.restrict', seq_dir + species_a + '.fasta')
 sites_b = emboss_read.getsites(seq_dir + species_b + '.restrict', seq_dir + species_b + '.fasta')
 
 #stating functions to write out unique restriction sites
-output_a=open("species_a_rs.restrict", "w")
-output_b=open("species_b_rs.restrict", "w")
+output_a=open("e_europaeus_rs.restrict", "w")
+output_b=open("s_vulgaris_rs.restrict", "w")
 #function to write out to a new file for Jalview purposes
 jalview=open('features.txt','w')
 
@@ -71,9 +71,15 @@ for s in sites_a:
         enzymecount[s['Enzyme_name']]['all_a']+=1
     except:
         enzymecount[s['Enzyme_name']]={'all_a':1,'all_b':0,'unique_a':0,'unique_b':0}
+        enzymecount[s['Enzyme_name']]={'all_a':0,'all_b':1,'unique_a':0,'unique_b':0}
+        enzymecount[s['Enzyme_name']]={'all_a':0,'all_b':0,'unique_a':1,'unique_b':0}
+        enzymecount[s['Enzyme_name']]={'all_a':0,'all_b':0,'unique_a':0,'unique_b':1}
+
 
 # after getting the count
-
+toomanycuts = 10
+unique_sites = []
 for site in unique_sites:
-    if enzymecount[site['unique_a']]< toomanycuts:
-        
+    if enzymecount[site['unique_a']]< toomanycuts:                               
+
+
