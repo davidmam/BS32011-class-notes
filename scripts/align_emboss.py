@@ -85,10 +85,9 @@ output_bf=open("s_vulgaris_rsf.restrict", "w")
 
 toomanycuts = 10
 for site in enzymecount:
-    if enzymecount[site[int('unique_a')]] or enzymecount[site[int('unique_b')]] <= toomanycuts:
+    if enzymecount[s['Enzyme_name']['unique_a']] <= toomanycuts:
         output_af.write(formatsite(sites_a['Enzyme_name'])+ "\n")
         jalview_uf.write(jalview_out(sites_a[pos_a], species_a)+'\n')
-
 
 #function to write out to a new file for Jalview purposes
 jalview_f=open('features_f.txt','w')
