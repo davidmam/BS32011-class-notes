@@ -66,28 +66,35 @@ output_a.close()
 output_b.close()
 
 jalview_uf.close()
-enzymecount={}
-for s in sites_a:
-    try:
-        enzymecount[s['Enzyme_name']]['all_a']+=1
-        enzymecount[s['Enzyme_name']]['all_b']+=1
-        enzymecount[s['Enzyme_name']]['unique_a']+=1
-        enzymecount[s['Enzyme_name']]['unique_b']+=1
-    except:
-        enzymecount[s['Enzyme_name']]={'all_a':1,'all_b':0,'unique_a':0,'unique_b':0}
-        enzymecount[s['Enzyme_name']]={'all_a':0,'all_b':1,'unique_a':0,'unique_b':0}
-        enzymecount[s['Enzyme_name']]={'all_a':0,'all_b':0,'unique_a':1,'unique_b':0}
-        enzymecount[s['Enzyme_name']]={'all_a':0,'all_b':0,'unique_a':0,'unique_b':1}
 
-# after getting the count
 output_af=open("e_europaeus_rsf.restrict", "w")
 output_bf=open("s_vulgaris_rsf.restrict", "w")
 
-toomanycuts = 10
-for site in enzymecount:
-    if enzymecount[s['Enzyme_name']['unique_a']] <= toomanycuts:
+toomanycuts = 5
+enzymecount={}
+
+for s in sites_a:
+    try:
+        enzymecount[s['Enzyme_name']]['all_a']+=1
+    except:
+        enzymecount[s['Enzyme_name']]={'all_a':1,'all_b':0}
+
+for s in sites_b:
+    try:
+        enzymecount[s['Enzyme_name']]['all_b']+=1
+    except:
+        enzymecount[s['Enzyme_name']]={'all_a':0,'all_b':1}
+
+for v in enzymecount:
+    if v['all_a'] <= toomanycuts:
         output_af.write(formatsite(sites_a['Enzyme_name'])+ "\n")
-        jalview_uf.write(jalview_out(sites_a[pos_a], species_a)+'\n')
+        jalview_uf.write(jalview_out(sites_a, species_a)+'\n')
+    elif v['all_b'] <= toomanycuts:
+        output_bf.write(formatsite(sites_b['Enzyme_name'])+ "\n")
+        jalview_uf.write(jalview_out(sites_b, species_a)+'\n')
+
+# after getting the count
+
 
 #function to write out to a new file for Jalview purposes
 jalview_f=open('features_f.txt','w')
