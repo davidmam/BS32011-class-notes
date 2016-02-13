@@ -14,10 +14,10 @@ sites_b = emboss_read.getsites(seq_dir + species_b + '.restrict', seq_dir + spec
 output_a=open("e_europaeus_rs.restrict", "w")
 output_b=open("s_vulgaris_rs.restrict", "w")
 #function to write out to a new file for Jalview purposes
-jalview=open('features.txt','w')
+jalview_uf=open('features_uf.txt','w')
 
 #colour in unique restriction sites with magenta on Jalview
-jalview.write('restrictionsite\tff00ff\n')
+jalview_uf.write('restrictionsite\tff00ff\n')
 
 #setting the position in the list of dictionaries
 pos_a=0
@@ -52,34 +52,46 @@ while pos_a < len(sites_a):
         pos_a += 1
         counter_a += 1
         species_a_unique.append(sites_a[pos_a])
-        jalview.write(jalview_out(sites_a[pos_a], species_a)+'\n')
+        jalview_uf.write(jalview_out(sites_a[pos_a], species_a)+'\n')
     elif sites_a[pos_a]['gappedstart'] > sites_b[pos_b]['gappedstart']:
         output_b.write(formatsite(sites_b[pos_b])+ "\n")
         pos_b += 1
         counter_b += 1
-        #add to b unique list
-        jalview.write(jalview_out(sites_b[pos_b], species_b)+'\n')
+        species_b_unique.append(sites_b[pos_b])
+        jalview_uf.write(jalview_out(sites_b[pos_b], species_b)+'\n')
 print(species_a + str(counter_a))
 print(species_b + str(counter_b))
 
 output_a.close()
 output_b.close()
-jalview.close()
+
+jalview_uf.close()
 enzymecount={}
 for s in sites_a:
     try:
         enzymecount[s['Enzyme_name']]['all_a']+=1
+        enzymecount[s['Enzyme_name']]['all_b']+=1
+        enzymecount[s['Enzyme_name']]['unique_a']+=1
+        enzymecount[s['Enzyme_name']]['unique_b']+=1
     except:
         enzymecount[s['Enzyme_name']]={'all_a':1,'all_b':0,'unique_a':0,'unique_b':0}
         enzymecount[s['Enzyme_name']]={'all_a':0,'all_b':1,'unique_a':0,'unique_b':0}
         enzymecount[s['Enzyme_name']]={'all_a':0,'all_b':0,'unique_a':1,'unique_b':0}
         enzymecount[s['Enzyme_name']]={'all_a':0,'all_b':0,'unique_a':0,'unique_b':1}
 
-
 # after getting the count
+output_af=open("e_europaeus_rsf.restrict", "w")
+output_bf=open("s_vulgaris_rsf.restrict", "w")
+
 toomanycuts = 10
-unique_sites = []
-for site in unique_sites:
-    if enzymecount[site['unique_a']]< toomanycuts:                               
+for site in enzymecount:
+    if enzymecount[site[int('unique_a')]] or enzymecount[site[int('unique_b')]] <= toomanycuts:
+        output_af.write(formatsite(sites_a['Enzyme_name'])+ "\n")
+        jalview_uf.write(jalview_out(sites_a[pos_a], species_a)+'\n')
 
 
+#function to write out to a new file for Jalview purposes
+jalview_f=open('features_f.txt','w')
+
+#colour in unique restriction sites with magenta on Jalview
+jalview_f.write('restrictionsite\t00FFF3\n')
