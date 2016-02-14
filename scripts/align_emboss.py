@@ -20,17 +20,20 @@ jalview_uf=open('features_uf.txt','w')
 jalview_uf.write('restrictionsite\tff00ff\n')
 
 #setting the position in the list of dictionaries
-pos_a=0
-pos_b=0
+pos_a=4438
+pos_b=4438
 
 #setting a counter to know how many unique restriction sites saved
 counter_a = 0
 counter_b = 0
 
 #defining a function that displays selected information from 'sites'
+
 def formatsite(site):
-    return '|'.join([str(site['Start']), str(site['gappedstart']), 
+    if site['gappedstart'] >= 4438 and site['gappedstart'] <= 13338:
+        return '|'.join([str(site['Start']), str(site['gappedstart']), 
               site['Enzyme_name'], site['Restriction_site']])
+
 #defining a function for output to be in jalview format
 def jalview_out(site, species):
     return '\t'.join([site['Enzyme_name'],species,'-1',
@@ -64,40 +67,3 @@ print(species_b + str(counter_b))
 
 output_a.close()
 output_b.close()
-
-jalview_uf.close()
-
-output_af=open("e_europaeus_rsf.restrict", "w")
-output_bf=open("s_vulgaris_rsf.restrict", "w")
-
-toomanycuts = 5
-enzymecount={}
-
-for s in sites_a:
-    try:
-        enzymecount[s['Enzyme_name']]['all_a']+=1
-    except:
-        enzymecount[s['Enzyme_name']]={'all_a':1,'all_b':0}
-
-for s in sites_b:
-    try:
-        enzymecount[s['Enzyme_name']]['all_b']+=1
-    except:
-        enzymecount[s['Enzyme_name']]={'all_a':0,'all_b':1}
-
-for v in enzymecount:
-    if v['all_a'] <= toomanycuts:
-        output_af.write(formatsite(sites_a['Enzyme_name'])+ "\n")
-        jalview_uf.write(jalview_out(sites_a, species_a)+'\n')
-    elif v['all_b'] <= toomanycuts:
-        output_bf.write(formatsite(sites_b['Enzyme_name'])+ "\n")
-        jalview_uf.write(jalview_out(sites_b, species_a)+'\n')
-
-# after getting the count
-
-
-#function to write out to a new file for Jalview purposes
-jalview_f=open('features_f.txt','w')
-
-#colour in unique restriction sites with magenta on Jalview
-jalview_f.write('restrictionsite\t00FFF3\n')
