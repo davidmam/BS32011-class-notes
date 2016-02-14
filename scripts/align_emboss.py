@@ -20,17 +20,20 @@ jalview_uf=open('features_uf.txt','w')
 jalview_uf.write('restrictionsite\tff00ff\n')
 
 #setting the position in the list of dictionaries
-pos_a=0
-pos_b=0
+pos_a=4438
+pos_b=4438
 
 #setting a counter to know how many unique restriction sites saved
 counter_a = 0
 counter_b = 0
 
 #defining a function that displays selected information from 'sites'
+
 def formatsite(site):
-    return '|'.join([str(site['Start']), str(site['gappedstart']), 
+    if site['gappedstart'] >= 4438 and site['gappedstart'] <= 13338:
+        return '|'.join([str(site['Start']), str(site['gappedstart']), 
               site['Enzyme_name'], site['Restriction_site']])
+
 #defining a function for output to be in jalview format
 def jalview_out(site, species):
     return '\t'.join([site['Enzyme_name'],species,'-1',
@@ -63,6 +66,7 @@ print(species_a + str(counter_a))
 print(species_b + str(counter_b))
 
 output_a.close()
+<<<<<<< HEAD
 output_b.close()
 
 jalview_uf.close()
@@ -93,3 +97,6 @@ for v in enzymecount:
     elif v['all_b'] <= toomanycuts:
         output_bf.write(formatsite(sites_b['Enzyme_name'])+ "\n")
         jalview_uf.write(jalview_out(sites_b, species_a)+'\n')
+=======
+output_b.close()
+>>>>>>> 704db65cf79a4606ddb38a5492f2aa033b8415d7
