@@ -3,16 +3,16 @@ import emboss_read
 seq_dir = '../sequences/individual/'
 
 #stating the filename of the species
-species_a =  "e_europaeus"
-species_b =  "s_vulgaris"
+species_a =  "l_europaeus"
+species_b =  "f_silvestris"
 
 #retrieve and access 'sites' using 'getsites' function and stating what files to use
 sites_a = emboss_read.getsites(seq_dir + species_a + '.restrict', seq_dir + species_a + '.fasta')
 sites_b = emboss_read.getsites(seq_dir + species_b + '.restrict', seq_dir + species_b + '.fasta')
 
 #stating functions to write out unique restriction sites
-output_a=open("e_europaeus_rs.restrict", "w")
-output_b=open("s_vulgaris_rs.restrict", "w")
+output_a=open("l_europaeus.restrict", "w")
+output_b=open("f_silvestris.restrict", "w")
 #function to write out to a new file for Jalview purposes
 jalview_uf=open('features_uf.txt','w')
 
@@ -67,8 +67,8 @@ output_b.close()
 
 jalview_uf.close()
 
-output_af=open("e_europaeus_rsf.restrict", "w")
-output_bf=open("s_vulgaris_rsf.restrict", "w")
+output_af=open("l_europaeus.restrict", "w")
+output_bf=open("f_silvestris.restrict", "w")
 
 toomanycuts = 5
 enzymecount={}
@@ -85,19 +85,11 @@ for s in sites_b:
     except:
         enzymecount[s['Enzyme_name']]={'all_a':0,'all_b':1}
 
+
 for v in enzymecount:
-    if v['all_a'] <= toomanycuts:
+    if int(v['all_a']) <= toomanycuts:
         output_af.write(formatsite(sites_a['Enzyme_name'])+ "\n")
         jalview_uf.write(jalview_out(sites_a, species_a)+'\n')
     elif v['all_b'] <= toomanycuts:
         output_bf.write(formatsite(sites_b['Enzyme_name'])+ "\n")
         jalview_uf.write(jalview_out(sites_b, species_a)+'\n')
-
-# after getting the count
-
-
-#function to write out to a new file for Jalview purposes
-jalview_f=open('features_f.txt','w')
-
-#colour in unique restriction sites with magenta on Jalview
-jalview_f.write('restrictionsite\t00FFF3\n')
