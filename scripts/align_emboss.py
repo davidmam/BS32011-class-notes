@@ -66,7 +66,6 @@ print(species_a + str(counter_a))
 print(species_b + str(counter_b))
 
 output_a.close()
-<<<<<<< HEAD
 output_b.close()
 
 jalview_uf.close()
@@ -97,6 +96,3 @@ for v in enzymecount:
     elif v['all_b'] <= toomanycuts:
         output_bf.write(formatsite(sites_b['Enzyme_name'])+ "\n")
         jalview_uf.write(jalview_out(sites_b, species_a)+'\n')
-=======
-output_b.close()
->>>>>>> 704db65cf79a4606ddb38a5492f2aa033b8415d7
