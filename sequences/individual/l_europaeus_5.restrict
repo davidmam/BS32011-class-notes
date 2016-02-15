@@ -1,0 +1,279 @@
+########################################
+# Program: restrict
+# Rundate: Mon 15 Feb 2016 10:49:07
+# Commandline: restrict
+#    [-sequence] l_europaeus.fasta
+#    -max 5
+#    [-outfile] l_europaeus_5.restrict
+# Report_format: table
+# Report_file: l_europaeus_5.restrict
+########################################
+
+#=======================================
+#
+# Sequence: L_europaeus     from: 1   to: 17734
+# HitCount: 242
+#
+# Minimum cuts per enzyme: 1
+# Maximum cuts per enzyme: 5
+# Minimum length of recognition site: 4
+# Blunt ends allowed
+# Sticky ends allowed
+# DNA is linear
+# Ambiguities allowed
+#
+#=======================================
+
+  Start     End  Strand Enzyme_name Restriction_site 5prime 3prime 5primerev 3primerev
+     68      80       - ArsI        GACNNNNNNTTYG        93     88        61        56
+    121     132       + DrdI        GACNNNNNNGTC        127    125         .         .
+    152     157       + ClaI        ATCGAT              153    155         .         .
+    155     164       + BsaBI       GATNNNNATC          159    159         .         .
+    236     241       + EcoP15I     CAGCAG              266    268         .         .
+    238     243       + BtsI        GCAGTG              245    243         .         .
+    232     242       - BaeI        ACNNNNGTAYC         257    252       224       219
+    255     260       + BsrDI       GCAATG              262    260         .         .
+    317     322       + SacII       CCGCGG              320    318         .         .
+    463     468       + AsuII       TTCGAA              464    466         .         .
+    490     495       + BfiI        ACTGGG              500    499         .         .
+    513     519       + EspI        GCTNAGC             514    517         .         .
+    634     639       + ClaI        ATCGAT              635    637         .         .
+    722     727       + HindIII     AAGCTT              722    726         .         .
+    743     748       + AclI        AACGTT              744    746         .         .
+    911     915       + Hpy99I      CGWCG               915    910         .         .
+    925     930       + ScaI        AGTACT              927    927         .         .
+   1004    1017       + AjuI        GAANNNNNNNTTGG      996    991      1028      1023
+   1059    1064       + AvaI        CYCGRG             1059   1063         .         .
+   1191    1196       + BfoI        RGCGCY             1195   1191         .         .
+   1230    1237       + PacI        TTAATTAA           1234   1232         .         .
+   1742    1747       + EcoRI       GAATTC             1742   1746         .         .
+   1858    1867       + OliI        CACNNNNGTG         1862   1862         .         .
+   1865    1870       + ApaLI       GTGCAC             1865   1869         .         .
+   1901    1906       - NmeAIII     GCCGAG             1881   1879         .         .
+   1965    1975       + BstAPI      GCANNNNNTGC        1971   1968         .         .
+   1966    1971       - BtsI        GCAGTG             1965   1963         .         .
+   1975    1980       - BfiI        ACTGGG             1970   1969         .         .
+   1985    1990       + AclI        AACGTT             1986   1988         .         .
+   1994    1999       + McrI        CGRYCG             1997   1995         .         .
+   1994    1999       + XmaIII      CGGCCG             1994   1998         .         .
+   1994    1999       + CfrI        YGGCCR             1994   1998         .         .
+   1997    2002       + SacII       CCGCGG             2000   1998         .         .
+   2068    2073       + BsiI        CACGAG             2068   2072         .         .
+   2249    2255       + BstEII      GGTNACC            2249   2254         .         .
+   2343    2348       + BclI        TGATCA             2343   2347         .         .
+   2388    2393       + XbaI        TCTAGA             2388   2392         .         .
+   2511    2516       + BetI        WCCGGW             2511   2515         .         .
+   2553    2558       - BfiI        ACTGGG             2548   2547         .         .
+   2596    2601       + SacI        GAGCTC             2600   2596         .         .
+   2596    2601       + Ecl136II    GAGCTC             2598   2598         .         .
+   2843    2848       + AsuII       TTCGAA             2844   2846         .         .
+   2850    2855       + Bsp120I     GGGCCC             2850   2854         .         .
+   2850    2855       + ApaI        GGGCCC             2854   2850         .         .
+   2865    2871       + PpuMI       RGGWCCY            2866   2869         .         .
+   2961    2966       - BtgZI       GCGATG             2946   2950         .         .
+   3082    3087       + AccI        GTMKAC             3083   3085         .         .
+   3097    3102       + BclI        TGATCA             3097   3101         .         .
+   3174    3180       + BstEII      GGTNACC            3174   3179         .         .
+   3258    3263       + NdeI        CATATG             3259   3261         .         .
+   3370    3375       + BetI        WCCGGW             3370   3374         .         .
+   3370    3375       + BspMII      TCCGGA             3370   3374         .         .
+   3391    3397       - AarI        CACCTGC            3382   3386         .         .
+   3591    3596       + BclI        TGATCA             3591   3595         .         .
+   3618    3623       + HindIII     AAGCTT             3618   3622         .         .
+   3636    3641       + BmtI        GCTAGC             3640   3636         .         .
+   3636    3641       + NheI        GCTAGC             3636   3640         .         .
+   3645    3650       + EcoT22I     ATGCAT             3649   3645         .         .
+   3648    3653       + NdeI        CATATG             3649   3651         .         .
+   3766    3771       + XbaI        TCTAGA             3766   3770         .         .
+   3777    3782       + StuI        AGGCCT             3779   3779         .         .
+   3811    3816       - BsiI        CACGAG             3811   3815         .         .
+   3872    3877       + Bsp120I     GGGCCC             3872   3876         .         .
+   3872    3877       + ApaI        GGGCCC             3876   3872         .         .
+   4073    4081       + AlwNI       CAGNNNCTG          4078   4075         .         .
+   4139    4150       + TstI        CACNNNNNNTCC       4130   4125      4162      4157
+   4412    4418       - BbvCI       CCTCAGC            4413   4416         .         .
+   4671    4676       + StuI        AGGCCT             4673   4673         .         .
+   4947    4952       + ScaI        AGTACT             4949   4949         .         .
+   4982    4987       + TaqII       GACCGA             4998   4996         .         .
+   5031    5036       + AflII       CTTAAG             5031   5035         .         .
+   5081    5088       + PacI        TTAATTAA           5085   5083         .         .
+   5111    5116       + BamHI       GGATCC             5111   5115         .         .
+   5262    5268       + SauI        CCTNAGG            5263   5266         .         .
+   5377    5391       + XcmI        CCANNNNNNNNNTGG    5384   5383         .         .
+   5490    5495       - Esp3I       CGTCTC             5484   5488         .         .
+   5524    5529       + SphI        GCATGC             5528   5524         .         .
+   5644    5649       + HindIII     AAGCTT             5644   5648         .         .
+   5661    5672       + TstI        CACNNNNNNTCC       5652   5647      5684      5679
+   5709    5717       + AlwNI       CAGNNNCTG          5714   5711         .         .
+   5726    5731       + AccI        GTMKAC             5727   5729         .         .
+   5897    5909       - PsrI        GAACNNNNNNTAC      5921   5916      5889      5884
+   5916    5921       + PvuII       CAGCTG             5918   5918         .         .
+   5954    5959       + NaeI        GCCGGC             5956   5956         .         .
+   5954    5959       + MroNI       GCCGGC             5954   5958         .         .
+   5954    5959       + Cfr10I      RCCGGY             5954   5958         .         .
+   5978    5983       + TaqII       GACCGA             5994   5992         .         .
+   6007    6012       + GsaI        CCCAGC             6011   6007         .         .
+   6007    6012       + BseYI       CCCAGC             6007   6011         .         .
+   6009    6014       + EcoP15I     CAGCAG             6039   6041         .         .
+   6011    6017       - AarI        CACCTGC            6002   6006         .         .
+   6021    6027       + PpuMI       RGGWCCY            6022   6025         .         .
+   6021    6027       + KflI        GGGWCCC            6022   6025         .         .
+   6057    6062       - TaqII       GACCGA             6047   6045         .         .
+   6239    6244       + AccI        GTMKAC             6240   6242         .         .
+   6246    6251       + BsiI        CACGAG             6246   6250         .         .
+   6277    6282       - BsrDI       GCAATG             6276   6274         .         .
+   6345    6350       + SacI        GAGCTC             6349   6345         .         .
+   6345    6350       + Ecl136II    GAGCTC             6347   6347         .         .
+   6348    6353       - GsuI        CTGGAG             6333   6331         .         .
+   6366    6372       + SauI        CCTNAGG            6367   6370         .         .
+   6415    6420       + BmtI        GCTAGC             6419   6415         .         .
+   6415    6420       + NheI        GCTAGC             6415   6419         .         .
+   6434    6442       + Tth111I     GACNNNGTC          6437   6438         .         .
+   6479    6484       + SnaBI       TACGTA             6481   6481         .         .
+   6648    6653       + SphI        GCATGC             6652   6648         .         .
+   6677    6681       + HgaI        GACGC              6686   6691         .         .
+   6685    6693       + DraIII      CACNNNGTG          6690   6687         .         .
+   6700    6705       + Esp3I       CGTCTC             6706   6710         .         .
+   6859    6870       + BcgI        CGANNNNNNTGC       6848   6846      6882      6880
+   6872    6877       + SnaBI       TACGTA             6874   6874         .         .
+   7084    7089       + SacI        GAGCTC             7088   7084         .         .
+   7084    7089       + Ecl136II    GAGCTC             7086   7086         .         .
+   7198    7202       + HgaI        GACGC              7207   7212         .         .
+   7371    7376       + BglII       AGATCT             7371   7375         .         .
+   7377    7382       + HindIII     AAGCTT             7377   7381         .         .
+   7546    7550       + HgaI        GACGC              7555   7560         .         .
+   7554    7560       + PfoI        TCCNGGA            7554   7559         .         .
+   7608    7613       + CfrI        YGGCCR             7608   7612         .         .
+   7694    7703       + BsaBI       GATNNNNATC         7698   7698         .         .
+   7709    7714       + XbaI        TCTAGA             7709   7713         .         .
+   7733    7738       + BfoI        RGCGCY             7737   7733         .         .
+   7733    7738       + Eco47III    AGCGCT             7735   7735         .         .
+   7736    7741       + BmtI        GCTAGC             7740   7736         .         .
+   7736    7741       + NheI        GCTAGC             7736   7740         .         .
+   7807    7818       + BstXI       CCANNNNNNTGG       7814   7810         .         .
+   7895    7900       + GsaI        CCCAGC             7899   7895         .         .
+   7895    7900       + BseYI       CCCAGC             7895   7899         .         .
+   7910    7917       + SwaI        ATTTAAAT           7913   7913         .         .
+   8067    8072       + Cfr10I      RCCGGY             8067   8071         .         .
+   8145    8156       + PpiI        GAACNNNNNCTC       8137   8132      8169      8164
+   8203    8208       + StuI        AGGCCT             8205   8205         .         .
+   8257    8266       + BsaBI       GATNNNNATC         8261   8261         .         .
+   8277    8285       + AlwNI       CAGNNNCTG          8282   8279         .         .
+   8345    8355       + BaeI        ACNNNNGTAYC        8334   8329      8367      8362
+   8442    8447       + EcoP15I     CAGCAG             8472   8474         .         .
+   8477    8487       + BstAPI      GCANNNNNTGC        8483   8480         .         .
+   8695    8700       - EciI        GGCGGA             8685   8683         .         .
+   8717    8723       + EspI        GCTNAGC            8718   8721         .         .
+   8724    8729       + NdeI        CATATG             8725   8727         .         .
+   8734    8745       + TstI        CACNNNNNNTCC       8725   8720      8757      8752
+   8970    8975       - EcoP15I     CAGCAG             8942   8944         .         .
+   9010    9022       + BarI        GAAGNNNNNNTAC      9002   8997      9034      9029
+   9044    9050       + SauI        CCTNAGG            9045   9048         .         .
+   9065    9070       + SacI        GAGCTC             9069   9065         .         .
+   9065    9070       + Ecl136II    GAGCTC             9067   9067         .         .
+   9246    9260       + XcmI        CCANNNNNNNNNTGG    9253   9252         .         .
+   9401    9410       + BsaBI       GATNNNNATC         9405   9405         .         .
+   9533    9539       + BstEII      GGTNACC            9533   9538         .         .
+   9539    9544       - BsrDI       GCAATG             9538   9536         .         .
+   9556    9561       - BfiI        ACTGGG             9551   9550         .         .
+   9610    9615       + NcoI        CCATGG             9610   9614         .         .
+   9680    9685       + XbaI        TCTAGA             9680   9684         .         .
+   9690    9696       + BspQI       GCTCTTC            9697   9700         .         .
+   9809    9814       + StuI        AGGCCT             9811   9811         .         .
+   9950    9955       + SphI        GCATGC             9954   9950         .         .
+   9997   10009       + BarI        GAAGNNNNNNTAC      9989   9984     10021     10016
+  10098   10110       + SfiI        GGCCNNNNNGGCC     10105  10102         .         .
+  10099   10109       + BglI        GCCNNNNNGGC       10105  10102         .         .
+  10119   10124       + BmtI        GCTAGC            10123  10119         .         .
+  10119   10124       + NheI        GCTAGC            10119  10123         .         .
+  10436   10441       + AflII       CTTAAG            10436  10440         .         .
+  10702   10707       + Eco31I      GGTCTC            10708  10712         .         .
+  10752   10757       + BspHI       TCATGA            10752  10756         .         .
+  10859   10864       - BsrDI       GCAATG            10858  10856         .         .
+  10882   10887       + McrI        CGRYCG            10885  10883         .         .
+  10882   10887       + XmaIII      CGGCCG            10882  10886         .         .
+  10882   10887       + CfrI        YGGCCR            10882  10886         .         .
+  11108   11113       + HindIII     AAGCTT            11108  11112         .         .
+  11220   11227       + PspXI       VCTCGAGB          11221  11225         .         .
+  11221   11226       + XhoI        CTCGAG            11221  11225         .         .
+  11221   11226       + AvaI        CYCGRG            11221  11225         .         .
+  11346   11351       + BspHI       TCATGA            11346  11350         .         .
+  11349   11354       + BclI        TGATCA            11349  11353         .         .
+  11479   11484       + XhoI        CTCGAG            11479  11483         .         .
+  11479   11484       + AvaI        CYCGRG            11479  11483         .         .
+  11645   11655       + BstAPI      GCANNNNNTGC       11651  11648         .         .
+  11732   11743       + BstXI       CCANNNNNNTGG      11739  11735         .         .
+  11790   11795       + Esp3I       CGTCTC            11796  11800         .         .
+  11866   11871       + SnaBI       TACGTA            11868  11868         .         .
+  11875   11885       + BaeI        ACNNNNGTAYC       11864  11859     11897     11892
+  11888   11893       + EcoT22I     ATGCAT            11892  11888         .         .
+  12038   12050       + PcsI        WCGNNNNNNNCGW     12044  12043         .         .
+  12055   12060       + BclI        TGATCA            12055  12059         .         .
+  12236   12244       + Tth111I     GACNNNGTC         12239  12240         .         .
+  12240   12245       + McrI        CGRYCG            12243  12241         .         .
+  12464   12470       + BbvCI       CCTCAGC           12465  12468         .         .
+  12484   12494       + BaeI        ACNNNNGTAYC       12473  12468     12506     12501
+  12494   12499       + BsrBI       CCGCTC            12496  12496         .         .
+  12527   12532       + GsuI        CTGGAG            12548  12546         .         .
+  12530   12540       + BplI        GAGNNNNNCTC       12521  12516     12553     12548
+  12530   12540       - BplI        GAGNNNNNCTC       12553  12548     12521     12516
+  12686   12696       + BglI        GCCNNNNNGGC       12692  12689         .         .
+  12750   12755       - BsgI        GTGCAG            12735  12733         .         .
+  12790   12795       + BetI        WCCGGW            12790  12794         .         .
+  12790   12795       + BspMII      TCCGGA            12790  12794         .         .
+  12816   12820       + Hpy99I      CGWCG             12820  12815         .         .
+  12872   12878       + BbvCI       CCTCAGC           12873  12876         .         .
+  13002   13007       - BsrDI       GCAATG            13001  12999         .         .
+  13019   13024       + PvuII       CAGCTG            13021  13021         .         .
+  13111   13118       + PacI        TTAATTAA          13115  13113         .         .
+  13129   13134       + Esp3I       CGTCTC            13135  13139         .         .
+  13465   13470       + EcoRV       GATATC            13467  13467         .         .
+  13486   13496       + BaeI        ACNNNNGTAYC       13475  13470     13508     13503
+  13506   13511       + StuI        AGGCCT            13508  13508         .         .
+  13580   13585       + BsiI        CACGAG            13580  13584         .         .
+  13888   13893       + BssNAI      GTATAC            13890  13890         .         .
+  13888   13893       + AccI        GTMKAC            13889  13891         .         .
+  14296   14310       + XcmI        CCANNNNNNNNNTGG   14303  14302         .         .
+  14376   14381       + NmeAIII     GCCGAG            14402  14400         .         .
+  14455   14460       + BspLU11I    ACATGT            14455  14459         .         .
+  14767   14778       + BstXI       CCANNNNNNTGG      14774  14770         .         .
+  14849   14853       + HgaI        GACGC             14858  14863         .         .
+  14915   14920       + AvaI        CYCGRG            14915  14919         .         .
+  14919   14925       + PpuMI       RGGWCCY           14920  14923         .         .
+  14919   14925       + KflI        GGGWCCC           14920  14923         .         .
+  15117   15122       - EciI        GGCGGA            15107  15105         .         .
+  15309   15314       - BfiI        ACTGGG            15304  15303         .         .
+  15352   15362       + BplI        GAGNNNNNCTC       15343  15338     15375     15370
+  15352   15362       - BplI        GAGNNNNNCTC       15375  15370     15343     15338
+  15364   15370       + PasI        CCCWGGG           15365  15368         .         .
+  15534   15539       + BspLU11I    ACATGT            15534  15538         .         .
+  15577   15582       + BspLU11I    ACATGT            15577  15581         .         .
+  15599   15605       + BspQI       GCTCTTC           15606  15609         .         .
+  15609   15614       + EcoT22I     ATGCAT            15613  15609         .         .
+  15781   15786       + NdeI        CATATG            15782  15784         .         .
+  15848   15859       + TstI        CACNNNNNNTCC      15839  15834     15871     15866
+  15848   15856       + DraIII      CACNNNGTG         15853  15850         .         .
+  15851   15856       - BsiI        CACGAG            15851  15855         .         .
+  15873   15878       + Bsp120I     GGGCCC            15873  15877         .         .
+  15873   15878       + ApaI        GGGCCC            15877  15873         .         .
+  16033   16038       + EcoT22I     ATGCAT            16037  16033         .         .
+  16078   16083       + CfrI        YGGCCR            16078  16082         .         .
+  16081   16086       + SacII       CCGCGG            16084  16082         .         .
+  16088   16093       + Bsp120I     GGGCCC            16088  16092         .         .
+  16088   16093       + ApaI        GGGCCC            16092  16088         .         .
+  16101   16106       + ApaLI       GTGCAC            16101  16105         .         .
+  16112   16117       + AccI        GTMKAC            16113  16115         .         .
+  16116   16128       + PcsI        WCGNNNNNNNCGW     16122  16121         .         .
+  16129   16134       + Bsp1407I    TGTACA            16129  16133         .         .
+  16595   16600       + AflII       CTTAAG            16595  16599         .         .
+  16682   16688       + PpuMI       RGGWCCY           16683  16686         .         .
+
+#---------------------------------------
+#---------------------------------------
+
+#---------------------------------------
+# Total_sequences: 1
+# Total_length: 17734
+# Reported_sequences: 1
+# Reported_hitcount: 242
+#---------------------------------------
