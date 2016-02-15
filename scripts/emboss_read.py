@@ -30,15 +30,26 @@ def getsites(sitefile,seqfile):
     #reading sequence as one line
     seq=''.join(fh.readlines()[1:]).replace('\n','')
     gaps=0
+    esites={}
     for e in sites:
         #calculating and defining new start sites
         while len(seq[:e['Start'] + gaps].replace('-','')) < e['Start']:
             gaps +=e['Start'] - len(seq[:e['Start'] + gaps].replace('-','')) 
         e['gappedstart']=e['Start']+gaps 
+        try:
+            esites[e['Enzyme_name']].append(e)
+        except:
+            esites[e['Enzyme_name']]=[e]
     fh.close()
     # add a fake 'last site' so the matching doesn't break
     sites.append({'Start': len(seq), 'End':len(seq), 
                   '3prime':len(seq),'5prime':len(seq),
                     'Restriction_site':'END', 'gappedstart':len(seq),
                     'Enzyme_name':'END'})
-    return sites
+    for e in esites:
+        esites[e].append({'Start': len(seq), 'End':len(seq), 
+                  '3prime':len(seq),'5prime':len(seq),
+                    'Restriction_site':'END', 'gappedstart':len(seq),
+                    'Enzyme_name':'END'})
+    #change this to return list of sites by enzyme    
+    return esites
