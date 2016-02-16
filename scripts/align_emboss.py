@@ -3,12 +3,13 @@ import emboss_read
 seq_dir = '../sequences/individual/'
 
 #stating the filename of the species
-species_a =  "l_europaeus"
-species_b =  "f_silvestris"
+species_a =  "species_name"
+species_b =  "species_name"
 
 #retrieve and access 'sites' using 'getsites' function and stating what files to use
-esites_a = emboss_read.getsites(seq_dir + species_a + '_16.restrict', seq_dir + species_a + '.fasta')
-esites_b = emboss_read.getsites(seq_dir + species_b + '_16.restrict', seq_dir + species_b + '.fasta')
+#x for a max value in restrict
+esites_a = emboss_read.getsites(seq_dir + species_a + '_x.restrict', seq_dir + species_a + '.fasta')
+esites_b = emboss_read.getsites(seq_dir + species_b + '_x.restrict', seq_dir + species_b + '.fasta')
 
 #ideas 
 # change sites_x from [ {site1}, {site2}] to
@@ -25,8 +26,8 @@ jalview_uf=open('features_uf.txt','w')
 jalview_uf.write('restrictionsite\tff00ff\n')
 
 #setting the position in the list of dictionaries
-pos_a=0
-pos_b=0
+pos_a = 0
+pos_b = 0
 
 #setting a counter to know how many unique restriction sites saved
 counter_a = 0
@@ -113,8 +114,7 @@ output_bf=open("f_silvestris.restrict", "w")
 
 toomanycuts = 5
 enzymecount={'END':{'all_a':1,'all_b':1,'unique_a':1,'unique_b':1}}
-regionstart=4500
-regionend=1400
+
 for s in allsites_a:
     try:
         enzymecount[s['Enzyme_name']]['all_a']+=1
@@ -132,9 +132,6 @@ for s in species_b_unique:
 for s in species_a_unique:
     enzymecount[s['Enzyme_name']]['unique_a']+=1
 
-toomanycuts=5
-
 for v in enzymecount.keys():
     if int(enzymecount[v]['all_a']) <= toomanycuts and int(enzymecount[v]['all_b']) <= toomanycuts :
         print('%s\t%s\t%s\t%s\t%s\n'%(v,enzymecount[v]['all_a'],enzymecount[v]['unique_a'],enzymecount[v]['all_b'],enzymecount[v]['unique_b']))
-    
