@@ -1,19 +1,12 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Feb 11 10:54:36 2016
-
-@author: O202B
-"""
-
-primer3params={'SEQUENCE_TARGET': '',
-               'SEQUENCE':'',
-               'PRIMER_PRODUCT_SIZE':'100-300',
-               'PRIMER_TM_MAX': 61,
-               'PRIMER_TM_MIN': 59
-               }
+primer3params={'Sequence_ID': '', 
+               'Sequence_Included_Region': '4438,13338',
+               'SEQUENCE_TARGET': '',
+               'PRIMER_PRODUCT_SIZE_RANGE':'100-300',
+               'PRIMER_MAX_TM': '61',
+               'PRIMER_MIN_TM': '59'}
                
 # gethe sequence
-sequencefile='f_silvestris.fasta'
+sequencefile='s_vulgaris.fasta'
 
 primer3params['SEQUENCE']=''.join(open(sequencefile).readlines()[1:]).replace('\n','')
 

@@ -3,13 +3,13 @@ import emboss_read
 seq_dir = '../sequences/individual/'
 
 #stating the filename of the species
-species_a =  "species_name"
-species_b =  "species_name"
+species_a =  "e_europaeus"
+species_b =  "s_vulgaris"
 
 #retrieve and access 'sites' using 'getsites' function and stating what files to use
 #x for a max value in restrict
-esites_a = emboss_read.getsites(seq_dir + species_a + '_x.restrict', seq_dir + species_a + '.fasta')
-esites_b = emboss_read.getsites(seq_dir + species_b + '_x.restrict', seq_dir + species_b + '.fasta')
+esites_a = emboss_read.getsites(seq_dir + species_a + '_16.restrict', seq_dir + species_a + '.fasta')
+esites_b = emboss_read.getsites(seq_dir + species_b + '_16.restrict', seq_dir + species_b + '.fasta')
 
 #ideas 
 # change sites_x from [ {site1}, {site2}] to
@@ -55,32 +55,35 @@ species_a_unique=[]
 species_b_unique=[]
 #run this for each list in sites (by enzyme)
 # eg. for enzyme in esites: (check enzyme cuts both species, if it doesn't then take that entire list as unique for that species)
+
+enzymelist = [] #add list of suitable enzymes from printed output for specific species
+
 allcutters=set(list(esites_a.keys())+list(esites_b.keys()))
 allsites_a=[]
 allsites_b=[]
-for enzyme in allcutters: # change this to a list of interesting enzymes if you wish
+for enzymelist in allcutters: # change this to a list of interesting enzymes if you wish
     pos_a=0
     pos_b=0
-    if enzyme not in esites_a:
+    if enzymelist not in esites_a:
         #write out as unique b
-        for s in esites_b[enzyme]:
+        for s in esites_b[enzymelist]:
             output_b.write(formatsite(s)+ "\n")
             jalview_uf.write(jalview_out(s, species_b)+'\n')
-        counter_b += len(esites_b[enzyme])-1
-        species_b_unique+=esites_b[enzyme][:-1]
-        allsites_b+=esites_b[enzyme][:-1]
-    elif enzyme not in esites_b:
+        counter_b += len(esites_b[enzymelist])-1
+        species_b_unique+=esites_b[enzymelist][:-1]
+        allsites_b+=esites_b[enzymelist][:-1]
+    elif enzymelist not in esites_b:
         print('unique in A')
-        for s in esites_a[enzyme]:
+        for s in esites_a[enzymelist]:
             output_a.write(formatsite(s)+ "\n")
             jalview_uf.write(jalview_out(s, species_a)+'\n')
-        counter_a += len(esites_a[enzyme])-1
-        species_a_unique+=esites_a[enzyme][:-1]
-        allsites_a+=esites_a[enzyme][:-1]
+        counter_a += len(esites_a[enzymelist])-1
+        species_a_unique+=esites_a[enzymelist][:-1]
+        allsites_a+=esites_a[enzymelist][:-1]
 #write out as unique_a
     else:
-        sites_a = esites_a[enzyme]
-        sites_b = esites_b[enzyme]
+        sites_a = esites_a[enzymelist]
+        sites_b = esites_b[enzymelist]
         allsites_a=allsites_a+sites_a[:-1]#strip off fake end
         allsites_b+=sites_b[:-1]#strip off fake end
         print('comparing enzymes')
@@ -109,8 +112,8 @@ output_b.close()
 
 jalview_uf.close()
 
-output_af=open("l_europaeus.restrict", "w")
-output_bf=open("f_silvestris.restrict", "w")
+output_af=open("e_europaeus.restrict", "w")
+output_bf=open("s_vulgaris.restrict", "w")
 
 toomanycuts = 5
 enzymecount={'END':{'all_a':1,'all_b':1,'unique_a':1,'unique_b':1}}
