@@ -1,12 +1,12 @@
-primer3params={'Sequence_ID': '', 
+primer3params={'Sequence_ID': 's_vulgaris', 
                'Sequence_Included_Region': '4438,13338',
-               'SEQUENCE_TARGET': '',
+               'SEQUENCE_TARGET': '1,10',
                'PRIMER_PRODUCT_SIZE_RANGE':'100-300',
                'PRIMER_MAX_TM': '61',
                'PRIMER_MIN_TM': '59'}
-               
-# gethe sequence
-sequencefile='s_vulgaris.fasta'
+
+# get the sequence
+sequencefile='../sequences/individual/s_vulgaris.fasta'
 
 primer3params['SEQUENCE']=''.join(open(sequencefile).readlines()[1:]).replace('\n','')
 
@@ -15,8 +15,6 @@ primer3params['SEQUENCE']=''.join(open(sequencefile).readlines()[1:]).replace('\
 p3i=open('primer3input.txt','w')
 
 for k in primer3params.keys():
-    p3i.write('%s=%s'%(k,primer3params[k])) ##ther is something missing
+    p3i.write('%s=%s'%(k,primer3params[k] + '\n'))
 
 p3i.close()
-
-
