@@ -135,6 +135,6 @@ for s in species_a_unique:
 toomanycuts=5
 
 for v in enzymecount.keys():
-    if int(enzymecount[v]['all_a']) <= toomanycuts and int(enzymecount[v]['all_b']) <= toomanycuts :
+    if int(enzymecount[v]['all_a']) <= toomanycuts and int(enzymecount[v]['all_b']) != int(enzymecount[v]['all_a']) :
         print('%s\t%s\t%s\t%s\t%s\n'%(v,enzymecount[v]['all_a'],enzymecount[v]['unique_a'],enzymecount[v]['all_b'],enzymecount[v]['unique_b']))
     
