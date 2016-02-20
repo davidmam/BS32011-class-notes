@@ -1,18 +1,18 @@
 #imports the other script instead of merging two scripts
-import emboss_read
-seq_dir = '../sequences/individual/'
+import emboss_read_is
+seq_dir = '../Imogen_S/'
 
 #stating the filename of the species
-species_a =  "m_nivalis"
-species_b =  "m_erminea"
+species_a =  "m_erminea"
+species_b =  "m_nivalis"
 
 #retrieve and access 'sites' using 'getsites' function and stating what files to use
-sites_a = emboss_read.getsites(seq_dir + species_a + '.restrict', seq_dir + species_a + '.fasta')
-sites_b = emboss_read.getsites(seq_dir + species_b + '.restrict', seq_dir + species_b + '.fasta')
+sites_a = emboss_read_is.getsites(seq_dir + species_a + '.restrict', seq_dir + species_a + '.fasta')
+sites_b = emboss_read_is.getsites(seq_dir + species_b + '.restrict', seq_dir + species_b + '.fasta')
 
 #stating functions to write out unique restriction sites
-output_a=open("m_nivalis_rs.restrict", "w")
-output_b=open("m_erminea_rs.restrict", "w")
+output_a=open("m_erminea_rs.restrict", "w")
+output_b=open("m_nivalis_rs.restrict", "w")
 #function to write out to a new file for Jalview purposes
 jalview=open('features.txt','w')
 
@@ -40,7 +40,10 @@ def jalview_out(site, species):
 
 #loop selects and saves restriction sites unique to both species
 #two new files containing unique restriction sites and a 'features.txt' file (imported into Jalview) to highlight them in Jalview
-while sites_a[pos_a]['gappedstart'] < len(sites_a):
+species_a_unique=[]
+species_b_unique=[]
+
+while pos_a < len(sites_a):
     if sites_a[pos_a]['gappedstart'] == sites_b[pos_b]['gappedstart']:
         pos_a += 1
         pos_b += 1
@@ -48,11 +51,13 @@ while sites_a[pos_a]['gappedstart'] < len(sites_a):
         output_a.write(formatsite(sites_a[pos_a])+ "\n")
         pos_a += 1
         counter_a += 1
+        species_a_unique.append(sites_a[pos_a])
         jalview.write(jalview_out(sites_a[pos_a], species_a)+'\n')
     elif sites_a[pos_a]['gappedstart'] > sites_b[pos_b]['gappedstart']:
         output_b.write(formatsite(sites_b[pos_b])+ "\n")
         pos_b += 1
         counter_b += 1
+        #add to b unique list
         jalview.write(jalview_out(sites_b[pos_b], species_b)+'\n')
 print(species_a + str(counter_a))
 print(species_b + str(counter_b))
@@ -60,3 +65,5 @@ print(species_b + str(counter_b))
 output_a.close()
 output_b.close()
 jalview.close()
+
+   

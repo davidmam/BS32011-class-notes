@@ -24,6 +24,32 @@
 
 ===
 
+###Meeting 8 - Thursday 18/Feb
+####Overview
+
+1. Progress: 
+
+ - Changes to both align_emboss.py and primer3.py to fix any snags.
+ - Empty list in align_emboss to add suitable enzymes
+    - Dashes replaced in primer3 script. 
+    - It was noted that 400-800 was a more suitable range for __primer_product_size_range__ 
+  - Updated README file to include guidance on primer3
+
+2. Actions:
+  - Final results from primer3 for your individual species pair
+  - Explanation of all code on your personal branch (to be referenced in your report)
+  - Final meeting to discuss report and any further questions on Monday, 10am
+
+  ####Roles and Attendance
+| Group Member   | Roles         | Attendance  |
+| -------------  |:-------------:| -----------:|
+| Maxim Tsenkov  | Presenter     | Present     |
+| Alan Keith     | Chair         | Present     |
+| Imogen Stafford| Minute Taker  | Present     |
+| Simon Bajew    |       -       | Present     |
+
+===
+
 ###Meeting 6 - Thursday 11/Feb
 ###Overview
 

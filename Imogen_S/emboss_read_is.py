@@ -36,4 +36,9 @@ def getsites(sitefile,seqfile):
             gaps +=e['Start'] - len(seq[:e['Start'] + gaps].replace('-','')) 
         e['gappedstart']=e['Start']+gaps 
     fh.close()
+    # add a fake 'last site' so the matching doesn't break
+    sites.append({'Start': len(seq), 'End':len(seq), 
+                  '3prime':len(seq),'5prime':len(seq),
+                    'Restriction_site':'END', 'gappedstart':len(seq),
+                    'Enzyme_name':'END'})
     return sites
