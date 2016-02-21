@@ -1,3 +1,4 @@
+import emboss_read
 import align_emboss
 
 jalview_ff=open('features_f.txt','w')
@@ -12,4 +13,4 @@ for range(4438,13338) in output_a:
         sites_a.append.replace('')
     else:
         output_a.write(sites_a.append + "\n")
-        jalview_f.write(jalview_out(sites_a[pos_b], species_b)+'\n')
+        jalview_ff.write(jalview_out(sites_a[pos_b], species_b)+'\n')
