@@ -56,12 +56,14 @@ species_b_unique=[]
 #run this for each list in sites (by enzyme)
 # eg. for enzyme in esites: (check enzyme cuts both species, if it doesn't then take that entire list as unique for that species)
 
-enzymelist = [] #add list of suitable enzymes from printed output for specific species
+enzymename = [] #add list of suitable enzymes from printed output for specific species
 
 allcutters=set(list(esites_a.keys())+list(esites_b.keys()))
 allsites_a=[]
 allsites_b=[]
 for enzymelist in allcutters: # change this to a list of interesting enzymes if you wish
+    if enzymename and enzymelist not in enzymename:
+        continue
     pos_a=0
     pos_b=0
     if enzymelist not in esites_a:

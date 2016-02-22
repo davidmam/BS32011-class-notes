@@ -116,6 +116,8 @@
 
 `git branch -d branch_name` - Deletes the branch specified.
 
+`git tag tag_name` - adds a human readable commit label. See [the Git tag documentation](https://git-scm.com/book/en/v2/Git-Basics-Tagging) for more information and note the specific comments about pushing tags to the remote server.
+
 =====
 
 ___N.B - Everything within {  } is a specific name, line of text, or referring to something that is unique and is not part of the command you type out___

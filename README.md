@@ -18,6 +18,7 @@
 
 * [Unix and Git](tutorials/shell_and_git.md)  
 * [Python Notes](tutorials/python.md)
+* [Writeup notes](tutorials/writeup.md)
 
 ## Mitochondrial sequences
 
