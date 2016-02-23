@@ -1,5 +1,5 @@
 #open the .fasta file for raw alignment
-fh=open("raw_data.fasta",'r')
+fh=open("all_MSA.fasta",'r')
 
 sequences=[]  
 for line in fh.readlines():
@@ -13,9 +13,9 @@ for line in fh.readlines():
 fh.close()
 
 #setting the cut-off for sequences, start position for the first common unit
-cutsite= 
+cutsite= 307
 
-output=open("sequences.fasta", "w")
+output=open("curated_MSA.fasta", "w")
 for seq in sequences:
     seq['sequence'][:cutsite] #looking at the seq in 'seq' key and reading it from [:cutsite]
     seq['sequence']=seq['sequence'][cutsite:]+seq['sequence'][:cutsite] #rearranging the sequences
