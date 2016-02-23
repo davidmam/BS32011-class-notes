@@ -1,46 +1,36 @@
-#imports the other script instead of merging two scripts
+#moderated by Simon Bajew on 23/02/2016#
+
 import emboss_read
 seq_dir = '../sequences/individual/'
 
-#stating the filename of the species
-species_a =  "e_europaeus"
-species_b =  "s_vulgaris"
+#setting the species names
+species_a =  "l_europaeus"
+species_b =  "o_cuniculus"
 
-#retrieve and access 'sites' using 'getsites' function and stating what files to use
-#x for a max value in restrict
+#retrieving and accessing 'sites' using 'getsites' function and stating what files to use
 esites_a = emboss_read.getsites(seq_dir + species_a + '_16.restrict', seq_dir + species_a + '.fasta')
 esites_b = emboss_read.getsites(seq_dir + species_b + '_16.restrict', seq_dir + species_b + '.fasta')
 
-#ideas 
-# change sites_x from [ {site1}, {site2}] to
-# {'enzyme1': [{site1}, {site2}],'Enzyme2':[{site1},{site2}]}
-
-
-#stating functions to write out unique restriction sites
+#opening files for writing out unique restriction sites
 output_a=open(species_a+".output", "w")
 output_b=open(species_b+".output", "w")
-#function to write out to a new file for Jalview purposes
-jalview_uf=open('features_uf.txt','w')
 
-#colour in unique restriction sites with magenta on Jalview
+#opening a file for writing out Jalview features file
+jalview_uf=open('features_uf.txt','w')
 jalview_uf.write('restrictionsite\tff00ff\n')
 
 #setting the position in the list of dictionaries
 pos_a = 0
 pos_b = 0
 
-#setting a counter to know how many unique restriction sites saved
+#setting a counter for saved unique restriction sites
 counter_a = 0
 counter_b = 0
 
 #defining a function that displays selected information from 'sites'
-
 def formatsite(site):
-    if site['gappedstart'] >= 4438 and site['gappedstart'] <= 13338:
         return '|'.join([str(site['Start']), str(site['gappedstart']), 
               site['Enzyme_name'], site['Restriction_site']])
-    else:
-        return ''
 
 #defining a function for output to be in jalview format
 def jalview_out(site, species):
@@ -114,8 +104,8 @@ output_b.close()
 
 jalview_uf.close()
 
-output_af=open("e_europaeus.restrict", "w")
-output_bf=open("s_vulgaris.restrict", "w")
+output_af=open("l_europaeus_16.restrict", "w")
+output_bf=open("o_cuniculus_16.restrict", "w")
 
 toomanycuts = 5
 enzymecount={'END':{'all_a':1,'all_b':1,'unique_a':1,'unique_b':1}}
