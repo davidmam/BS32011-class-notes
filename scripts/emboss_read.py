@@ -1,3 +1,5 @@
+#moderated by Simon Bajew on 23/02/2016
+
 #defining a general function with arg: sitefile in .restrict, seqfile in .fasta
 def getsites(sitefile,seqfile):
 
@@ -5,7 +7,7 @@ def getsites(sitefile,seqfile):
     headers=[]
     sites=[]
     
-    #processing the data
+#processing the data
     for line in fh.readlines():
     	#reading valid lines for lines not starting from '#'
         if not line.startswith('#'):
@@ -27,7 +29,7 @@ def getsites(sitefile,seqfile):
                     headers=line.strip().split()
     
     fh=open(seqfile,'r')
-    #reading sequence as one line
+    #reading sequence as one line from 1st position
     seq=''.join(fh.readlines()[1:]).replace('\n','')
     gaps=0
     esites={}
@@ -36,12 +38,14 @@ def getsites(sitefile,seqfile):
         while len(seq[:e['Start'] + gaps].replace('-','')) < e['Start']:
             gaps +=e['Start'] - len(seq[:e['Start'] + gaps].replace('-','')) 
         e['gappedstart']=e['Start']+gaps 
+        #checking valid arguments
         try:
             esites[e['Enzyme_name']].append(e)
         except:
             esites[e['Enzyme_name']]=[e]
     fh.close()
-    # add a fake 'last site' so the matching doesn't break
+    
+    #adding a fake 'last site' so the matching doesn't break
     sites.append({'Start': len(seq), 'End':len(seq), 
                   '3prime':len(seq),'5prime':len(seq),
                     'Restriction_site':'END', 'gappedstart':len(seq),
@@ -50,6 +54,5 @@ def getsites(sitefile,seqfile):
         esites[e].append({'Start': len(seq), 'End':len(seq), 
                   '3prime':len(seq),'5prime':len(seq),
                     'Restriction_site':'END', 'gappedstart':len(seq),
-                    'Enzyme_name':'END'})
-    #change this to return list of sites by enzyme    
+                    'Enzyme_name':'END'})    
     return esites
