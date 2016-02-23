@@ -16,7 +16,7 @@ output_a=open(species_a+".output", "w")
 output_b=open(species_b+".output", "w")
 
 #opening a file for writing out Jalview features file
-jalview_uf=open('features_uf.txt','w')
+jalview_uf=open('unflitered_features.txt','w')
 jalview_uf.write('restrictionsite\tff00ff\n')
 
 #setting the position in the list of dictionaries
@@ -46,18 +46,21 @@ species_b_unique=[]
 #run this for each list in sites (by enzyme)
 # eg. for enzyme in esites: (check enzyme cuts both species, if it doesn't then take that entire list as unique for that species)
 
-enzymename = [] #add list of suitable enzymes from printed output for specific species
+#adding a list of suitable enzymes from printed output for specific species
+enzymename = ["HgiCI", "Crf9I", "CsiI", "SfiI", "PmaCI", "KflI", "NarI", "EciI", "DinI", "SmaI", "AlfI", "BcgI", "KasI"] 
 
 allcutters=set(list(esites_a.keys())+list(esites_b.keys()))
 allsites_a=[]
 allsites_b=[]
+
 for enzymelist in allcutters: # change this to a list of interesting enzymes if you wish
     if enzymename and enzymelist not in enzymename:
         continue
     pos_a=0
     pos_b=0
     if enzymelist not in esites_a:
-        #write out as unique b
+        
+        #writting out as unique b
         for s in esites_b[enzymelist]:
             output_b.write(formatsite(s)+ "\n")
             jalview_uf.write(jalview_out(s, species_b)+'\n')
@@ -72,12 +75,13 @@ for enzymelist in allcutters: # change this to a list of interesting enzymes if 
         counter_a += len(esites_a[enzymelist])-1
         species_a_unique+=esites_a[enzymelist][:-1]
         allsites_a+=esites_a[enzymelist][:-1]
-#write out as unique_a
+
+#writing out as unique_a
     else:
         sites_a = esites_a[enzymelist]
         sites_b = esites_b[enzymelist]
-        allsites_a=allsites_a+sites_a[:-1]#strip off fake end
-        allsites_b+=sites_b[:-1]#strip off fake end
+        allsites_a=allsites_a+sites_a[:-1]#stripping off the fake End
+        allsites_b+=sites_b[:-1]#stripping off the fake End
         print('comparing enzymes')
         while pos_a < len(sites_a):
             if sites_a[pos_a]['gappedstart'] == sites_b[pos_b]['gappedstart']:
@@ -107,9 +111,11 @@ jalview_uf.close()
 output_af=open("l_europaeus_16.restrict", "w")
 output_bf=open("o_cuniculus_16.restrict", "w")
 
+#setting a cut-off for sites that cut more than 5 times
 toomanycuts = 5
-enzymecount={'END':{'all_a':1,'all_b':1,'unique_a':1,'unique_b':1}}
 
+#counting restriction sites
+enzymecount={'END':{'all_a':1,'all_b':1,'unique_a':1,'unique_b':1}}
 for s in allsites_a:
     try:
         enzymecount[s['Enzyme_name']]['all_a']+=1
@@ -127,6 +133,7 @@ for s in species_b_unique:
 for s in species_a_unique:
     enzymecount[s['Enzyme_name']]['unique_a']+=1
 
+#printing the table of all and unique sites
 for v in enzymecount.keys():
     if int(enzymecount[v]['all_a']) <= toomanycuts and int(enzymecount[v]['all_b']) <= toomanycuts :
         print('%s\t%s\t%s\t%s\t%s\n'%(v,enzymecount[v]['all_a'],enzymecount[v]['unique_a'],enzymecount[v]['all_b'],enzymecount[v]['unique_b']))
