@@ -9,7 +9,7 @@ primer3params={'Sequence_ID': 'l_europaeus',
                'PRIMER_MIN_TM': '58'}
 
 #getting the sequence in FASTA file
-sequencefile='C:/Users/SimonB/Desktop/BS32011-class-notes/sequences/individual/l_europaeus.fasta'
+sequencefile='../sequences/individual/l_europaeus.fasta'
 
 #replacing gaps in the sequence
 primer3params['SEQUENCE_TARGET']=''.join(open(sequencefile).readlines()[1:]).replace('\n','').replace('-','')

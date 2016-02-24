@@ -9,13 +9,13 @@ primer3params={'Sequence_ID': 'o_cuniculus',
                'PRIMER_MIN_TM': '58'}
 
 #getting the sequence in FASTA file
-sequencefile='C:/Users/SimonB/Desktop/BS32011-class-notes/sequences/individual/o_cuniculus.fasta'
+sequencefile='../sequences/individual/o_cuniculus.fasta'
 
 #replacing gaps in the sequence
 primer3params['SEQUENCE_TARGET']=''.join(open(sequencefile).readlines()[1:]).replace('\n','').replace('-','')
 
 #writing Primer3 output file
-p3i=open('primer3_lupus.txt','w')
+p3i=open('primer3_oryctolagus.txt','w')
 for k in primer3params.keys():
     p3i.write('%s=%s'%(k,primer3params[k] + '\n'))
 
