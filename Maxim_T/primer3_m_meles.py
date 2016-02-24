@@ -1,14 +1,14 @@
 primer3params={'Sequence_ID': 'm_meles', 
-               'Sequence_Included_Region': '4438,13338',
+               'SEQUENCE_INCLUDED_REGION': '4438,13338',
                'SEQUENCE_TARGET': '8000,50',
-               'PRIMER_PRODUCT_SIZE_RANGE':'100-300',
+               'PRIMER_PRODUCT_SIZE_RANGE':'400-800',
                'PRIMER_MAX_TM': '61',
-               'PRIMER_MIN_TM': '59'}
+               'PRIMER_MIN_TM': '58'}
 
 # get the sequence
 sequencefile='m_meles.fasta'
 
-primer3params['SEQUENCE']=''.join(open(sequencefile).readlines()[1:]).replace('\n','').replace('-','')
+primer3params['SEQUENCE_TEMPLATE']=''.join(open(sequencefile).readlines()[1:]).replace('\n','').replace('-','')
 
 #sequence_target is start site +/- a space around it. 50bp?
 
