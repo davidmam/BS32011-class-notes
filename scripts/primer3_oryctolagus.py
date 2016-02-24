@@ -12,7 +12,7 @@ primer3params={'Sequence_ID': 'o_cuniculus',
 sequencefile='../sequences/individual/o_cuniculus.fasta'
 
 #replacing gaps in the sequence
-primer3params['SEQUENCE_TARGET']=''.join(open(sequencefile).readlines()[1:]).replace('\n','').replace('-','')
+primer3params['SEQUENCE_TEMPLATE']=''.join(open(sequencefile).readlines()[1:]).replace('\n','').replace('-','')
 
 #writing Primer3 output file
 p3i=open('primer3_oryctolagus.txt','w')
