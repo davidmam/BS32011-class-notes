@@ -1,29 +1,23 @@
 #imports the other script instead of merging two scripts
-import emboss_read
-seq_dir = '../sequences/individual/'
+import emboss_read_MT
 
 #stating the filename of the species
-species_a =  "e_europaeus"
-species_b =  "s_vulgaris"
+species_a =  "m_meles"
+species_b =  "v_vulpes"
 
 #retrieve and access 'sites' using 'getsites' function and stating what files to use
 #x for a max value in restrict
-esites_a = emboss_read.getsites(seq_dir + species_a + '_16.restrict', seq_dir + species_a + '.fasta')
-esites_b = emboss_read.getsites(seq_dir + species_b + '_16.restrict', seq_dir + species_b + '.fasta')
-
-#ideas 
-# change sites_x from [ {site1}, {site2}] to
-# {'enzyme1': [{site1}, {site2}],'Enzyme2':[{site1},{site2}]}
-
+esites_a = emboss_read_MT.getsites(species_a + '_16.restrict', species_a + '.fasta')
+esites_b = emboss_read_MT.getsites(species_b + '_16.restrict', species_b + '.fasta')
 
 #stating functions to write out unique restriction sites
 output_a=open(species_a+".output", "w")
 output_b=open(species_b+".output", "w")
 #function to write out to a new file for Jalview purposes
-jalview_uf=open('features_uf.txt','w')
+jalview_f=open('features_f.txt','w')
 
 #colour in unique restriction sites with magenta on Jalview
-jalview_uf.write('restrictionsite\tff00ff\n')
+jalview_f.write('restrictionsite\tff00ff\n')
 
 #setting the position in the list of dictionaries
 pos_a = 0
@@ -56,7 +50,11 @@ species_b_unique=[]
 #run this for each list in sites (by enzyme)
 # eg. for enzyme in esites: (check enzyme cuts both species, if it doesn't then take that entire list as unique for that species)
 
-enzymename = [] #add list of suitable enzymes from printed output for specific species
+#add list of suitable enzymes from printed output for specific species
+enzymename = ['Cfr9I', 'CspCI', 'Eam1105I', 'AlfI', 'Acc65I', 
+              'KpnI', 'AatII', 'GsaI', 'KflI', 'PpiI', 
+              'AclI', 'DraIII', 'SnaBI', 'SmaI', 'PshAI', 
+              'PmaCI', 'BseYI', 'PfoI', 'Ecl136II', 'SfiI']
 
 allcutters=set(list(esites_a.keys())+list(esites_b.keys()))
 allsites_a=[]
@@ -70,7 +68,7 @@ for enzymelist in allcutters: # change this to a list of interesting enzymes if 
         #write out as unique b
         for s in esites_b[enzymelist]:
             output_b.write(formatsite(s)+ "\n")
-            jalview_uf.write(jalview_out(s, species_b)+'\n')
+            jalview_f.write(jalview_out(s, species_b)+'\n')
         counter_b += len(esites_b[enzymelist])-1
         species_b_unique+=esites_b[enzymelist][:-1]
         allsites_b+=esites_b[enzymelist][:-1]
@@ -78,7 +76,7 @@ for enzymelist in allcutters: # change this to a list of interesting enzymes if 
         print('unique in A')
         for s in esites_a[enzymelist]:
             output_a.write(formatsite(s)+ "\n")
-            jalview_uf.write(jalview_out(s, species_a)+'\n')
+            jalview_f.write(jalview_out(s, species_a)+'\n')
         counter_a += len(esites_a[enzymelist])-1
         species_a_unique+=esites_a[enzymelist][:-1]
         allsites_a+=esites_a[enzymelist][:-1]
@@ -99,23 +97,23 @@ for enzymelist in allcutters: # change this to a list of interesting enzymes if 
                 counter_a += 1
                 species_a_unique.append(sites_a[pos_a])
                 print('unique A')
-                jalview_uf.write(jalview_out(sites_a[pos_a], species_a)+'\n')
+                jalview_f.write(jalview_out(sites_a[pos_a], species_a)+'\n')
             elif sites_a[pos_a]['gappedstart'] > sites_b[pos_b]['gappedstart']:
                 output_b.write(formatsite(sites_b[pos_b])+ "\n")
                 pos_b += 1
                 counter_b += 1
                 species_b_unique.append(sites_b[pos_b])
-                jalview_uf.write(jalview_out(sites_b[pos_b], species_b)+'\n')
+                jalview_f.write(jalview_out(sites_b[pos_b], species_b)+'\n')
 print(species_a + str(counter_a))
 print(species_b + str(counter_b))
 
 output_a.close()
 output_b.close()
 
-jalview_uf.close()
+jalview_f.close()
 
-output_af=open("e_europaeus.restrict", "w")
-output_bf=open("s_vulgaris.restrict", "w")
+output_af=open("m_meles.restrict", "w")
+output_bf=open("v_vulpes.restrict", "w")
 
 toomanycuts = 5
 enzymecount={'END':{'all_a':1,'all_b':1,'unique_a':1,'unique_b':1}}

@@ -1,0 +1,13 @@
+restrictionsite	ff00ff
+SpeI	m_meles	-1	6070	6076	restrictionsite
+SpeI	v_vulpes	-1	8783	8789	restrictionsite
+SpeI	m_meles	-1	7354	7360	restrictionsite
+SpeI	m_meles	-1	7833	7839	restrictionsite
+SpeI	m_meles	-1	8093	8099	restrictionsite
+SpeI	m_meles	-1	8279	8285	restrictionsite
+SpeI	m_meles	-1	13760	13766	restrictionsite
+SpeI	v_vulpes	-1	10322	10328	restrictionsite
+SpeI	v_vulpes	-1	11197	11203	restrictionsite
+SpeI	v_vulpes	-1	15110	15116	restrictionsite
+SpeI	m_meles	-1	14340	14346	restrictionsite
+SpeI	m_meles	-1	15368	15374	restrictionsite

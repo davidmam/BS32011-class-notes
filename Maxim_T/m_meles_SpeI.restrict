@@ -1,0 +1,37 @@
+########################################
+# Program: restrict
+# Rundate: Tue 16 Feb 2016 16:18:12
+# Commandline: restrict
+#    [-sequence] m_meles.fasta
+#    -max 16
+#    [-outfile] m_meles_16.restrict
+#    -auto
+# Report_format: table
+# Report_file: m_meles_16.restrict
+########################################
+
+#=======================================
+#
+# Sequence: M_meles     from: 1   to: 16442
+# HitCount: 805
+#
+# Minimum cuts per enzyme: 1
+# Maximum cuts per enzyme: 16
+# Minimum length of recognition site: 4
+# Blunt ends allowed
+# Sticky ends allowed
+# DNA is linear
+# Ambiguities allowed
+#
+#=======================================
+
+  Start     End  Strand Enzyme_name Restriction_site 5prime 3prime 5primerev 3primerev
+   3366    3371       + SpeI        ACTAGT             3366   3370         .         .
+   5905    5910       + SpeI        ACTAGT             5905   5909         .         .
+   7182    7187       + SpeI        ACTAGT             7182   7186         .         .
+   7661    7666       + SpeI        ACTAGT             7661   7665         .         .
+   7898    7903       + SpeI        ACTAGT             7898   7902         .         .
+   8083    8088       + SpeI        ACTAGT             8083   8087         .         .
+  13555   13560       + SpeI        ACTAGT            13555  13559         .         .
+  14122   14127       + SpeI        ACTAGT            14122  14126         .         .
+  15150   15155       + SpeI        ACTAGT            15150  15154         .         .
