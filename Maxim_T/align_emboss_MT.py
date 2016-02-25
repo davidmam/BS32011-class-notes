@@ -39,8 +39,8 @@ def formatsite(site):
 #defining a function for output to be in jalview format
 def jalview_out(site, species):
     return '\t'.join([site['Enzyme_name'],species,'-1',
-               str(site['gappedstart']),
-            str(site['gappedstart']+len(site['Restriction_site'])),
+               str(site['Start']),
+            str(site['Start']+len(site['Restriction_site'])),
                 'restrictionsite'])
 
 #loop selects and saves restriction sites unique to both species

@@ -1,6 +1,6 @@
 primer3params={'Sequence_ID': 'm_meles', 
                'SEQUENCE_INCLUDED_REGION': '4438,13338',
-               'SEQUENCE_TARGET': '8000,50',
+               'SEQUENCE_TARGET': '6800,100',
                'PRIMER_PRODUCT_SIZE_RANGE':'400-800',
                'PRIMER_MAX_TM': '61',
                'PRIMER_MIN_TM': '58'}
