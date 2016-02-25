@@ -11,14 +11,22 @@
 * [Imogen Stafford](biographies/imogenabout.md)
 * [Maxim Tsenkov](biographies/MaximT.md)
 
-## Python Scripts
+## [Python Scripts](scripts)
 
 * [Curated Alignment](scripts/curated_alignment.py)
 * [EMBOSS Output](scripts/emboss_read.py)
 * [EMBOSS Enzyme Search](scripts/align_emboss.py)
 * [Primer3 L.europaeus](scripts/primer3_lepus.py)
 * [Primer3 L.oryctolagus](primer3_oryctolagus.py)
-* 
+
+## [Materials](materials)
+
+Folder contains .dna files for both mitochondrial genomes and respectivelly generated RFLP products.
+
+## Mitochondrial sequences
+
+* [Species and FASTA files](sequences/mitochondrial_sequences.md)
+
 ## To-do list and meetings
 
 * [To-do list and meetings](todolist_and_meetings.md)
@@ -29,6 +37,3 @@
 * [Python Notes](tutorials/python.md)
 * [Writeup notes](tutorials/writeup.md)
 
-## Mitochondrial sequences
-
-* [Species and FASTA files](sequences/mitochondrial_sequences.md)
