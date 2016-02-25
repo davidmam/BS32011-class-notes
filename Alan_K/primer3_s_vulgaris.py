@@ -8,7 +8,7 @@ primer3params={'Sequence_ID': 's_vulgaris',
 # get the sequence
 sequencefile='../sequences/individual/s_vulgaris.fasta'
 
-primer3params['SEQUENCE']=''.join(open(sequencefile).readlines()[1:]).replace('\n','').replace('-','')
+primer3params['SEQUENCE_TARGET']=''.join(open(sequencefile).readlines()[1:]).replace('\n','').replace('-','')
 
 #sequence_target is start site +/- a space around it. 50bp?
 

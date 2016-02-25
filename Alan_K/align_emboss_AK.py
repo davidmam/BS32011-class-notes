@@ -1,19 +1,16 @@
 #imports the other script instead of merging two scripts
 import emboss_read_AK
-seq_dir = '../Alan_K/'
+seq_dir = '../Alan_K/' #specifies the directory to work in
 
-#stating the filename of the species
+#stating the start of the filename of the species
 species_a =  "e_europaeus"
 species_b =  "s_vulgaris"
 
-#retrieve and access 'sites' using 'getsites' function and stating what files to use
-#x for a max value in restrict
+#defining esites for each species by adding specific file handles to the basic 'species_x'
 esites_a = emboss_read_AK.getsites(seq_dir + species_a + '_16.restrict', seq_dir + species_a + '.fasta')
 esites_b = emboss_read_AK.getsites(seq_dir + species_b + '_16.restrict', seq_dir + species_b + '.fasta')
 
-#ideas 
-# change sites_x from [ {site1}, {site2}] to
-# {'enzyme1': [{site1}, {site2}],'Enzyme2':[{site1},{site2}]}
+
 
 
 #stating functions to write out unique restriction sites
