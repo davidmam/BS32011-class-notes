@@ -1,6 +1,6 @@
 primer3params={'Sequence_ID': 'v_vulpes', 
                'SEQUENCE_INCLUDED_REGION': '4438,10338',
-               'SEQUENCE_TARGET': '6200,150',
+               'SEQUENCE_TARGET': '6000,150',
                'PRIMER_PRODUCT_SIZE_RANGE':'400-800',
                'PRIMER_MAX_TM': '61',
                'PRIMER_MIN_TM': '58'}
