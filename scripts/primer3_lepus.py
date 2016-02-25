@@ -1,4 +1,5 @@
 #moderated by Simon Bajew on 23/02/2016
+#Primer3 parameters can be found at http://primer3.sourceforge.net/primer3_manual.htm
 
 #setting up parameters for Primer3
 primer3params={'Sequence_ID': 'l_europaeus', 
@@ -14,8 +15,8 @@ sequencefile='../sequences/individual/l_europaeus.fasta'
 #replacing gaps in the sequence
 primer3params['SEQUENCE_TEMPLATE']=''.join(open(sequencefile).readlines()[1:]).replace('\n','').replace('-','')
 
-#writing Primer3 output file
-p3i=open('primer3_lepus.txt','w')
+#writing Primer3 input file
+p3i=open('primer3_lepus.txit','w')
 for k in primer3params.keys():
     p3i.write('%s=%s'%(k,primer3params[k] + '\n'))
 
