@@ -4,7 +4,7 @@
 #setting up parameters for Primer3
 primer3params={'Sequence_ID': 'o_cuniculus', 
                'SEQUENCE_INCLUDED_REGION': '4438,10338',
-               'SEQUENCE_TARGET': '5000,50',
+               'SEQUENCE_TARGET': '9300,150',
                'PRIMER_PRODUCT_SIZE_RANGE':'400-800',
                'PRIMER_MAX_TM': '61',
                'PRIMER_MIN_TM': '58'}
