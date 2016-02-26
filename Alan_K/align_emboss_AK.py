@@ -14,13 +14,13 @@ esites_b = emboss_read_AK.getsites(seq_dir + species_b + '_16.restrict', seq_dir
 
 
 #stating functions to write out unique restriction sites
-output_a=open(species_a+".output", "w")
-output_b=open(species_b+".output", "w")
+output_a=open(species_a+"_16.output", "w")
+output_b=open(species_b+"_16.output", "w")
 #function to write out to a new file for Jalview purposes
-jalview_uf=open('features_uf.txt','w')
+jalview_uf=open('features.txt','w')
 
 #colour in unique restriction sites with magenta on Jalview
-jalview_uf.write('restrictionsite\tff00ff\n')
+jalview_uf.write('restrictionsite\t00ffff\n')
 
 #setting the position in the list of dictionaries
 pos_a = 0
