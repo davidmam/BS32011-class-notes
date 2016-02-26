@@ -116,10 +116,31 @@
 
 `git branch -d branch_name` - Deletes the branch specified.
 
+`git tag tag_name` - adds a human readable commit label. See [the Git tag documentation](https://git-scm.com/book/en/v2/Git-Basics-Tagging) for more information and note the specific comments about pushing tags to the remote server.
+
+### Cloning and syncing a branch
+
+1. Create a local copy of the repository with `git clone <repo url>` (you have probably already done this)
+2. Switch to your branch with `git checkout mybranch`
+3. Add a remote origin with a specific branch with 'git remote add -t mybranch myorigin <repo url>`
+4. Sync the remote repository with the local one with `git pull myorigin`
+
+
 =====
+
 
 ___N.B - Everything within {  } is a specific name, line of text, or referring to something that is unique and is not part of the command you type out___
 
 ======
 
 See [this article](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004668) for an overview and introduction to git
+
+# Logging in to the teaching server
+
+You can only log on from the campus network (Lifesci or UoD IT suites - UoD wireless may be difficult)
+
+Point your ssh client to `ts-ug.lifesci.dundee.ac.uk` and login with your username/password (or use SSH keys if you know how to set that up)
+
+You have all the Unix tools there, like `git` and so on. The preferred way to sync software and scripts is with `git`, though you can use `scp` to copy data to/from the server.
+
+![Teaching server login](Server Login.png)

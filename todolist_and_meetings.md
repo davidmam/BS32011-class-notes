@@ -1,19 +1,13 @@
-#To-Do List
-
-###General
-- [x] Create list of meetings and a to-do list
-- [x] Update README.md file
-
-===
+﻿#To-Do List
 
 ###Weekly Goals
 #### General
-- [ ] Use completed scripts to produce 'filtered' restrict files containing unique restriction sites for pair of species
-- [ ] Open fasta files in Jalview and import 'features.txt' to highlight the restriction sites for pair of species
- - [ ] View the restriction sites highlighted and perhaps consider selecting regions recognised in one species, but not so much in the other
- - [ ] Consider the approach as to whether selecting restriction sites 'by eye' or perhaps writing out a script, for example to filter out similar sites in both sequences
-- [ ] Download and familiarise with SnapGene and Primer3
-- [ ] Look at mitochondrial sequences to recognise which regions of the DNA are conserved and which are hypervariable
+- [x] Use completed scripts to produce 'filtered' restrict files containing unique restriction sites for pair of species
+- [x] Open fasta files in Jalview and import 'features.txt' to highlight the restriction sites for pair of species
+- [x] View the restriction sites highlighted and perhaps consider selecting regions recognised in one species, but not so much in the other
+- [x] Consider the approach as to whether selecting restriction sites 'by eye' or perhaps writing out a script, for example to filter out similar sites in both sequences
+- [x] Download and familiarise with SnapGene and Primer3
+- [x] Look at mitochondrial sequences to recognise which regions of the DNA are conserved and which are hypervariable
 - [ ] Import the 'filtered' restrict files into Primer3
 - [ ] Map restriction sites onto the mitochondrial genome in SnapGene
 - [ ] Write script together for Primer3 output
@@ -30,24 +24,76 @@
 
 ===
 
+###Meeting 8 - Thursday 18/Feb
+####Overview
+
+1. Progress: 
+
+ - Changes to both align_emboss.py and primer3.py to fix any snags.
+ - Empty list in align_emboss to add suitable enzymes
+    - Dashes replaced in primer3 script. 
+    - It was noted that 400-800 was a more suitable range for __primer_product_size_range__ 
+  - Updated README file to include guidance on primer3
+
+2. Actions:
+  - Final results from primer3 for your individual species pair
+  - Explanation of all code on your personal branch (to be referenced in your report)
+  - Final meeting to discuss report and any further questions on Monday, 10am
+
+  ####Roles and Attendance
+| Group Member   | Roles         | Attendance  |
+| -------------  |:-------------:| -----------:|
+| Maxim Tsenkov  | Presenter     | Present     |
+| Alan Keith     | Chair         | Present     |
+| Imogen Stafford| Minute Taker  | Present     |
+| Simon Bajew    |       -       | Present     |
+
+===
+
+###Meeting 6 - Thursday 11/Feb
+###Overview
+
+1. Python overview: emboss_Read 
+		     - Added list to prevent matching break
+		     - Printed at various points to check data is correct at each point (then removed once confirmed)
+		            align_emboss
+		     - Added lists for unique restriction sites for species a and b
+			 - added try/except to give count and unique cuts
+
+2. Actions:
+
+ - Add in 'species_b_unique' list 
+ - Decide which cuts are suitable and colour these in a different colour to rest
+ - Decide suitable parameters for primer3
+ 
+3. No further issues so far
+
+####Roles and Attendance
+| Group Member   | Roles         | Attendance  |
+| -------------  |:-------------:| -----------:|
+| Imogen Stafford| Presenter     | Present     |
+| Simon Bajew    | Chair         | Present     |
+| Alan Keith     | Minute Taker  | Present     |
+| Maxim Tsenkov  |       -       | Present     |
+
+==
+
 ###Meeting 5 - Monday 08/Feb
 ####Overview
 
-1. Current State of the Project:
-
-Script is complete and gives the correct output we need in the right format. Went over what Primer3 is, how it works and the manual online, as well as the different filters and conditions to consider for finding the best primers.
+1. Current State of the Project: Script is complete and gives the correct output we need in the right format. Went over what Primer3 is, how it works and the manual online, as well as the different filters and conditions to consider for finding the best primers.
 
 2. Actions: 
 
-- Download and familiarise with SnapGene and Primer3.
-- Look at mitochondrial sequences to recognise which regions of the DNA are conserved and which are hypervariable.
-- Identifying restriction sites with specific filters and conditions, either choosing them 'by eye' or writing out a personal script to automate the process.
-- Write a script together for Primer3 output by Thursday. 
+ - Download and familiarise with SnapGene and Primer3.
+ - Look at mitochondrial sequences to recognise which regions of the DNA are conserved and which are hypervariable.
+ - Identifying restriction sites with specific filters and conditions, either choosing them 'by eye' or writing out a personal script to automate the process.
+ - Write a script together for Primer3 output by Thursday. 
 
 
 3. No further issues: everyone felt comfortable to continue with their tasks after discussions.
 
-___N.B. - Remember to only email Dr. David Martin the commit number and the script name of your latest copy pushed, instead of sending a block of code___
+ ___N.B. - Remember to only email Dr. David Martin the commit number and the script name of your latest copy pushed, instead of sending a block of code___
 
 ####Roles and Attendance
 | Group Member   | Roles         | Attendance  |
