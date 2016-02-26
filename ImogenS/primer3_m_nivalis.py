@@ -16,5 +16,6 @@ p3i=open('primer3input_m_nivalis.txt','w')
 
 for k in primer3params.keys():
     p3i.write('%s=%s'%(k,primer3params[k] + '\n'))
-
+    
 p3i.close()
+
