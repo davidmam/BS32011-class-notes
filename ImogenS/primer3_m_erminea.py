@@ -1,6 +1,6 @@
 primer3params={'Sequence_ID': 'm_erminea', 
                'Sequence_Included_Region': '4438,13338',
-               'SEQUENCE_TARGET': '7000,50',
+               'SEQUENCE_TARGET': '12000,50',
                'PRIMER_PRODUCT_SIZE_RANGE':'400-800',
                'PRIMER_MAX_TM': '61',
                'PRIMER_MIN_TM': '59'}
