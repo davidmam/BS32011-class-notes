@@ -13,7 +13,7 @@ for line in fh.readlines():
 fh.close()
 
 #setting the cut-off for sequences, start position for the first common unit
-cutsite= 
+cutsite= 662
 
 output=open("sequences.fasta", "w")
 for seq in sequences:

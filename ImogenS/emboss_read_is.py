@@ -5,7 +5,7 @@ def getsites(sitefile,seqfile):
     headers=[]
     sites=[]
     
-    #processing the data
+    #processes the data
     for line in fh.readlines():
     	#reading valid lines for lines not starting from '#'
         if not line.startswith('#'):
@@ -22,7 +22,7 @@ def getsites(sitefile,seqfile):
     			#appending new dictionary to sites
                     sites.append(new_dict)
             else:
-    		#for line starting with space, finding first valid header
+    		#for line starting with space, find the first valid header
                 if line.replace(' ','').startswith('Start'):
                     headers=line.strip().split()
     
@@ -41,7 +41,7 @@ def getsites(sitefile,seqfile):
         except:
             esites[e['Enzyme_name']]=[e]
     fh.close()
-    # add a fake 'last site' so the matching doesn't break
+    # add an additional 'last site' so the matching doesn't break
     sites.append({'Start': len(seq), 'End':len(seq), 
                   '3prime':len(seq),'5prime':len(seq),
                     'Restriction_site':'END', 'gappedstart':len(seq),
