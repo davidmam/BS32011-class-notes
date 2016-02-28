@@ -20,7 +20,7 @@ output_b=open(species_b+"_16.output", "w")
 jalview_uf=open('features.txt','w')
 
 #colour in unique restriction sites with magenta on Jalview
-jalview_uf.write('restrictionsite\t00ffff\n')
+jalview_uf.write('restrictionsite\tff00ff\n')
 
 #setting the position in the list of dictionaries
 pos_a = 0
