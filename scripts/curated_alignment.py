@@ -15,11 +15,12 @@ fh.close()
 #setting the cut-off for sequences, start position for the first common unit
 cutsite= 307
 
+#writing rearranged FASTA file
 output=open("curated_MSA.fasta", "w")
 for seq in sequences:
     seq['sequence'][:cutsite] #looking at the seq in 'seq' key and reading it from [:cutsite]
     seq['sequence']=seq['sequence'][cutsite:]+seq['sequence'][:cutsite] #rearranging the sequences
-    output.write('>' + seq['Species'] + '\n' + seq['sequence'] + '\n') #write output within the loop to go through the whole list of dictionaries
+    output.write('>' + seq['Species'] + '\n' + seq['sequence'] + '\n') #writing output within the loop to go through the whole list of dictionaries
 print(sequences)
 
 output.close()

@@ -39,14 +39,11 @@ def jalview_out(site, species):
             str(site['Start']+len(site['Restriction_site'])),
                 'restrictionsite'])
 
-#loop selects and saves restriction sites unique to both species
-#two new files containing unique restriction sites and a 'features.txt' file (imported into Jalview) to highlight them in Jalview
+#keeping unique sites
 species_a_unique=[]
 species_b_unique=[]
-#run this for each list in sites (by enzyme)
-# eg. for enzyme in esites: (check enzyme cuts both species, if it doesn't then take that entire list as unique for that species)
 
-#adding a list of suitable enzymes from printed output for specific species
+#adding a list of suitable enzymes from printed output for specific species based on the first run of the script
 enzymename = ["SmaI", "MroNI","ApaLI", "NaeI", "KflI", "PmaCI", "EciI", "SfiI", "PspXI", "CsiI", "NarI",
               "XhoI", "BcgI", "PstI", "BtrI", "AlfI", "PshAI", "AarI", "KasI", "HgiCI", "DinI", "ArsI", "Tth111I"] 
 
